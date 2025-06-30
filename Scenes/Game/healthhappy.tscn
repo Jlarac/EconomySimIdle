@@ -1,0 +1,705 @@
+[gd_scene load_steps=22 format=3 uid="uid://xtrwu5iggxck"]
+
+[ext_resource type="PackedScene" uid="uid://d1ejixc36j41k" path="res://Scenes/UI/header.tscn" id="1_mmw0q"]
+[ext_resource type="Script" uid="uid://dbgpcxt880diw" path="res://Scripts/Game/healthhappy.gd" id="1_xcckx"]
+[ext_resource type="Texture2D" uid="uid://djl8lciqjxgv5" path="res://Assets/Images/Menu/hearth_168.png" id="2_j3emo"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="3_mxbsi"]
+[ext_resource type="Texture2D" uid="uid://dutoxhrd4fsvc" path="res://Assets/Images/Menu/happy_128.png" id="3_rydq3"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="4_d1gna"]
+[ext_resource type="Texture2D" uid="uid://b1aa3e00ut7ow" path="res://Assets/Images/HealthHappy/sick_64.png" id="5_h3ewr"]
+[ext_resource type="Texture2D" uid="uid://drecdf187wdx6" path="res://Assets/Images/HealthHappy/bed_64.png" id="6_gwx6c"]
+[ext_resource type="Texture2D" uid="uid://dxkavkdo776o5" path="res://Assets/Images/HealthHappy/food2_64.png" id="7_5bbyx"]
+[ext_resource type="Texture2D" uid="uid://xlmcliuaewo0" path="res://Assets/Images/HealthHappy/wc_64.png" id="9_4175s"]
+[ext_resource type="Texture2D" uid="uid://71lgsye88ju7" path="res://Assets/Images/HealthHappy/friend_64.png" id="12_c5ila"]
+[ext_resource type="Texture2D" uid="uid://ctrvn8w3iyhoo" path="res://Assets/Images/HealthHappy/house_64.png" id="13_r5wyr"]
+[ext_resource type="Texture2D" uid="uid://d2lfx6agbyc6o" path="res://Assets/Images/HealthHappy/car_64.png" id="14_sqqaq"]
+[ext_resource type="Texture2D" uid="uid://ce0aon8cce3kg" path="res://Assets/Images/HealthHappy/work_64.png" id="15_toqrm"]
+[ext_resource type="Texture2D" uid="uid://c0164hcuhnpgo" path="res://Assets/Images/HealthHappy/food_64.png" id="16_l0fpw"]
+[ext_resource type="Texture2D" uid="uid://po7ikoae6ieu" path="res://Assets/Images/HealthHappy/clothes_64.png" id="17_nioj2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vffly"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5k8v"]
+bg_color = Color(0.645885, 0.788183, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_3w26w"]
+font = ExtResource("4_d1gna")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylxhv"]
+bg_color = Color(1, 0, 0, 0.352941)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcfq7"]
+bg_color = Color(1, 1, 0, 0.352941)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="HealthHappy" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcckx")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.239216, 0.352941, 1)
+
+[node name="Body" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderUI" parent="Body" instance=ExtResource("1_mmw0q")]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+
+[node name="Menu_header_pnl" type="Panel" parent="Body"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vffly")
+
+[node name="MarginContainer" type="MarginContainer" parent="Body/Menu_header_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Panel" type="Panel" parent="Body/Menu_header_pnl/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g5k8v")
+
+[node name="Menu_header_lbl" type="Label" parent="Body/Menu_header_pnl/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "#MENU WINDOW"
+label_settings = SubResource("LabelSettings_3w26w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close_menu_btn" type="Button" parent="Body/Menu_header_pnl/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/focus = ExtResource("3_mxbsi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_mxbsi")
+theme_override_styles/hover_pressed = ExtResource("3_mxbsi")
+theme_override_styles/hover = ExtResource("3_mxbsi")
+theme_override_styles/pressed = ExtResource("3_mxbsi")
+theme_override_styles/normal = ExtResource("3_mxbsi")
+text = "X"
+
+[node name="Todo" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Todo"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Body/Todo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ylxhv")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Body/Todo/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_j3emo")
+
+[node name="HBoxHealth" type="HBoxContainer" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(704, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("5_h3ewr")
+
+[node name="virus_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("6_gwx6c")
+
+[node name="bed_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel2"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("7_5bbyx")
+
+[node name="stove_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel3"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel4"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("9_4175s")
+
+[node name="fridge_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel4"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel5"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("16_l0fpw")
+
+[node name="wc_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel5"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel6"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("17_nioj2")
+
+[node name="shower_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2/HBoxHealth/Panel6"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer/Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 40
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Body/Todo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hcfq7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_rydq3")
+
+[node name="HBoxHappy" type="HBoxContainer" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(704, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("12_c5ila")
+
+[node name="friends_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("13_r5wyr")
+
+[node name="house_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel2"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("14_sqqaq")
+
+[node name="car_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel3"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel4"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("15_toqrm")
+
+[node name="work_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel4"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel5"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("16_l0fpw")
+
+[node name="food_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel5"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_mxbsi")
+
+[node name="TextureRect2" type="TextureRect" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel6"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("17_nioj2")
+
+[node name="clothes_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer/HBoxHappy/Panel6"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 20
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="happy_lbl" type="Label" parent="Body/Todo/VBoxContainer/MarginContainer2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_d1gna")
+theme_override_font_sizes/font_size = 40
+text = "+99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item_container" type="MarginContainer" parent="Body/Todo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/Todo/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Todo/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="Body/Menu_header_pnl/MarginContainer/Panel/Close_menu_btn" to="." method="_on_close_menu_btn_pressed"]

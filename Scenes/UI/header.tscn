@@ -1,0 +1,542 @@
+[gd_scene load_steps=24 format=3 uid="uid://d1ejixc36j41k"]
+
+[ext_resource type="Script" uid="uid://dq3dpyntbbfn8" path="res://Scripts/UI/header.gd" id="1_le3ag"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="2_jq5vs"]
+[ext_resource type="StyleBox" uid="uid://dxx7jpd1wgxfq" path="res://Resources/Themes/progress_menu.tres" id="2_ksvrh"]
+[ext_resource type="StyleBox" uid="uid://dvcy22nts5uu3" path="res://Resources/Themes/health_bar.tres" id="3_jm5qo"]
+[ext_resource type="StyleBox" uid="uid://3xqrsgs352ni" path="res://Resources/Themes/happy_bar.tres" id="5_mc1fs"]
+[ext_resource type="Texture2D" uid="uid://bh8bykrypb0wt" path="res://Assets/Images/Sickness/health.png" id="5_r3j80"]
+[ext_resource type="Texture2D" uid="uid://bovf7f5kwsbmo" path="res://Assets/Images/Header/happy.png" id="7_ueu4j"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="8_qfjyb"]
+[ext_resource type="FontFile" uid="uid://bkk6jrvn503wx" path="res://Resources/Fonts/alarm clock.ttf" id="8_qyhvq"]
+[ext_resource type="StyleBox" uid="uid://b4lmqp6lukcwb" path="res://Resources/Themes/black_panel.tres" id="8_ueu4j"]
+[ext_resource type="StyleBox" uid="uid://ceh8vbpaxmb2s" path="res://Resources/Themes/health_green_bar.tres" id="9_4dfwv"]
+[ext_resource type="Texture2D" uid="uid://bptc7xskavkl5" path="res://Assets/Images/Header/pay.png" id="9_8w0dn"]
+[ext_resource type="StyleBox" uid="uid://c1b4bgm7c8gra" path="res://Resources/Themes/health_blue_bar.tres" id="9_pyjdy"]
+[ext_resource type="StyleBox" uid="uid://y74bya4y4sq7" path="res://Resources/Themes/bluecard.tres" id="10_yskpp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyjdy"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8xrx"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dfwv"]
+bg_color = Color(0, 0, 0, 0.47451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksvrh"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w0dn"]
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bggdf"]
+bg_color = Color(0.690671, 0.920647, 0.99923, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xpad"]
+bg_color = Color(0.0732029, 0.516183, 0.54297, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1.20327e-07, 0.328249, 0.330162, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuxxb"]
+bg_color = Color(0.0732029, 0.516183, 0.54297, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1.20327e-07, 0.328249, 0.330162, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwmjc"]
+bg_color = Color(0.0732029, 0.516183, 0.54297, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1.20327e-07, 0.328249, 0.330162, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 100
+
+[node name="HeaderUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_le3ag")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Header" type="Panel" parent="."]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 150.0
+size_flags_horizontal = 4
+theme_override_styles/panel = ExtResource("2_ksvrh")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Header/HBoxContainer2/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_qfjyb")
+
+[node name="health_progress" type="ProgressBar" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer/Panel"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_pyjdy")
+theme_override_styles/fill = ExtResource("3_jm5qo")
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer/Panel/health_progress"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = -3.0
+grow_vertical = 2
+texture = ExtResource("5_r3j80")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_qfjyb")
+
+[node name="happy_progress" type="ProgressBar" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer/Panel2"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_f8xrx")
+theme_override_styles/fill = ExtResource("5_mc1fs")
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer/Panel2/happy_progress"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = -3.0
+grow_vertical = 2
+texture = ExtResource("7_ueu4j")
+expand_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Header/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(130, 70)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_ueu4j")
+
+[node name="health_progress" type="ProgressBar" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel"]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_pyjdy")
+theme_override_styles/fill = ExtResource("9_pyjdy")
+value = 100.0
+show_percentage = false
+
+[node name="sick_progress" type="ProgressBar" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel/health_progress"]
+visible = false
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = ExtResource("8_qfjyb")
+theme_override_styles/fill = ExtResource("9_4dfwv")
+value = 75.0
+show_percentage = false
+
+[node name="health_lbl2" type="Label" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel/health_progress"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -24.5
+offset_right = 148.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health_lbl" type="Label" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel/health_progress"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -15.5
+offset_right = -12.0
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dfwv")
+text = "-99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = -3.0
+grow_vertical = 2
+texture = ExtResource("5_r3j80")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(130, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ksvrh")
+
+[node name="happy_progress" type="ProgressBar" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2"]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_f8xrx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8w0dn")
+value = 100.0
+show_percentage = false
+
+[node name="happy_lbl" type="Label" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2/happy_progress"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -15.5
+offset_right = -12.0
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dfwv")
+text = "-99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="happy_lbl2" type="Label" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2/happy_progress"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -24.5
+offset_right = 148.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = -3.0
+grow_vertical = 2
+texture = ExtResource("7_ueu4j")
+expand_mode = 1
+
+[node name="date_pnl" type="Panel" parent="Header/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bggdf")
+
+[node name="date_lbl" type="Label" parent="Header/HBoxContainer2/date_pnl"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -55.0
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 32
+text = "#00/00/0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="clock_lbl" type="Label" parent="Header/HBoxContainer2/date_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("8_qyhvq")
+theme_override_font_sizes/font_size = 60
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="card" type="Panel" parent="Header/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_yskpp")
+
+[node name="card2" type="Panel" parent="Header/HBoxContainer2/card"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+offset_left = 100.0
+offset_right = 400.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xpad")
+
+[node name="card3" type="Panel" parent="Header/HBoxContainer2/card"]
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nuxxb")
+
+[node name="card4" type="Panel" parent="Header/HBoxContainer2/card"]
+layout_mode = 2
+offset_left = 150.0
+offset_right = 400.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xwmjc")
+
+[node name="money_lbl" type="Label" parent="Header/HBoxContainer2/card"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_right = -5.0
+offset_bottom = 94.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 58
+text = "$000,000.0M"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="income_lbl" type="Label" parent="Header/HBoxContainer2/card"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_jq5vs")
+theme_override_font_sizes/font_size = 40
+text = "(+$0,000,000)"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="card_icon" type="TextureRect" parent="Header/HBoxContainer2/card"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -50.0
+offset_right = 522.0
+offset_bottom = 462.0
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_8w0dn")
+
+[node name="bank" type="Button" parent="Header"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -430.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("8_qfjyb")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_qfjyb")
+theme_override_styles/hover_pressed = ExtResource("8_qfjyb")
+theme_override_styles/hover = ExtResource("8_qfjyb")
+theme_override_styles/pressed_mirrored = ExtResource("8_qfjyb")
+theme_override_styles/pressed = ExtResource("8_qfjyb")
+theme_override_styles/normal = ExtResource("8_qfjyb")
+
+[node name="healthhappy" type="Button" parent="Header"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 430.0
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("8_qfjyb")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_qfjyb")
+theme_override_styles/hover_pressed = ExtResource("8_qfjyb")
+theme_override_styles/hover = ExtResource("8_qfjyb")
+theme_override_styles/pressed_mirrored = ExtResource("8_qfjyb")
+theme_override_styles/pressed = ExtResource("8_qfjyb")
+theme_override_styles/normal = ExtResource("8_qfjyb")
+
+[connection signal="pressed" from="Header/bank" to="." method="_on_bank_pressed"]
+[connection signal="pressed" from="Header/healthhappy" to="." method="_on_healthhappy_pressed"]

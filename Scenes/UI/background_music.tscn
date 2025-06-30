@@ -1,0 +1,11 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdvwun4vuq1hs"]
+
+[ext_resource type="AudioStream" uid="uid://bfskjs6i1kjve" path="res://Assets/Music/River of Life.mp3" id="1_aq2m4"]
+[ext_resource type="Script" uid="uid://6fruf2k2ktkk" path="res://Scripts/UI/background_music.gd" id="2_avht6"]
+[ext_resource type="AudioStream" uid="uid://dfysom06386id" path="res://Assets/Music/Dream Explorer.mp3" id="3_bxpd4"]
+[ext_resource type="AudioStream" uid="uid://cnu6cy8407oss" path="res://Assets/Music/Ritmo Low.mp3" id="4_iam17"]
+[ext_resource type="AudioStream" uid="uid://bdqgj21y5tdc7" path="res://Assets/Music/The Water Castle.mp3" id="5_t3vt4"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+script = ExtResource("2_avht6")
+songs = Array[AudioStream]([ExtResource("1_aq2m4"), ExtResource("3_bxpd4"), ExtResource("4_iam17"), ExtResource("5_t3vt4")])

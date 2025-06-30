@@ -1,0 +1,842 @@
+[gd_scene load_steps=33 format=3 uid="uid://culmcdoc3x8jw"]
+
+[ext_resource type="Script" uid="uid://352f7oi6772t" path="res://Scripts/Game/people.gd" id="1_q522l"]
+[ext_resource type="PackedScene" uid="uid://d1ejixc36j41k" path="res://Scenes/UI/header.tscn" id="2_6ixng"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="3_pd82p"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="4_pij1d"]
+[ext_resource type="Texture2D" uid="uid://cac005pbn88hu" path="res://Assets/Images/UI/person.png" id="5_auyri"]
+[ext_resource type="Texture2D" uid="uid://de62o7ku8ujbr" path="res://Assets/Images/UI/work.png" id="6_elt22"]
+[ext_resource type="Texture2D" uid="uid://bjh13er483o8l" path="res://Assets/Images/UI/calendar.png" id="7_wfqgm"]
+[ext_resource type="Script" uid="uid://b0y3pwe67c2hl" path="res://addons/TextureRectRounded/TextureRectRounded.gd" id="8_4o0vh"]
+[ext_resource type="Texture2D" uid="uid://cgoufcjlvl2h3" path="res://Assets/Images/People/girl6.png" id="9_joyir"]
+[ext_resource type="Texture2D" uid="uid://cjkc6isr2djio" path="res://Assets/Images/Menu/star.png" id="10_c45wl"]
+[ext_resource type="Texture2D" uid="uid://cbxk4ihc5kg2k" path="res://Assets/Images/Relations/unknown.png" id="11_5x82o"]
+[ext_resource type="Texture2D" uid="uid://40rvenr1jh4h" path="res://Assets/Images/Relations/chemistry.png" id="12_d5l0u"]
+[ext_resource type="StyleBox" uid="uid://dxx7jpd1wgxfq" path="res://Resources/Themes/progress_menu.tres" id="13_5ur2o"]
+[ext_resource type="Texture2D" uid="uid://dneho5mt71ijy" path="res://Assets/Images/State_mind/happy.png" id="14_elt22"]
+[ext_resource type="Texture2D" uid="uid://cttt5o3nukmmj" path="res://Assets/Images/Menu/dinero (8).png" id="15_q6e0u"]
+[ext_resource type="Texture2D" uid="uid://c5gaaxpbxifb3" path="res://Assets/Images/Menu/trebol.png" id="17_b86vt"]
+[ext_resource type="StyleBox" uid="uid://paiv5tbwctp2" path="res://Resources/Themes/theme_green_panel.tres" id="17_waayo"]
+[ext_resource type="Texture2D" uid="uid://dbdxdewk14qnw" path="res://Assets/Images/Menu/trophey.png" id="18_c45wl"]
+[ext_resource type="Texture2D" uid="uid://bf8rdt5t7ekw4" path="res://Assets/Images/Menu/contacts.png" id="23_o2fia"]
+[ext_resource type="Texture2D" uid="uid://b4k6frfa0w4s" path="res://Assets/Images/Menu/profile.png" id="24_m16qa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waayo"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlr8f"]
+bg_color = Color(0.154876, 0.154876, 0.154876, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdhu8"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akvuu"]
+bg_color = Color(0.905929, 0.840568, 3.85046e-07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxxtp"]
+bg_color = Color(0.905882, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhonr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m16qa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2tpd"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abm8h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auyri"]
+bg_color = Color(0.505882, 0.47451, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14q7x"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p2cc"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[node name="People" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q522l")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.239216, 0.352941, 1)
+
+[node name="Body" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderUI" parent="Body" instance=ExtResource("2_6ixng")]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+
+[node name="Shop" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_container" type="MarginContainer" parent="Body/Shop"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/Shop/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Shop/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Profile" type="VBoxContainer" parent="Body"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="user_data" type="MarginContainer" parent="Body/Profile"]
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="card" type="Panel" parent="Body/Profile/user_data"]
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("4_pij1d")
+
+[node name="Player_data" type="VBoxContainer" parent="Body/Profile/user_data/card"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = 466.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Name_section" type="HBoxContainer" parent="Body/Profile/user_data/card/Player_data"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Person_icon" type="TextureRect" parent="Body/Profile/user_data/card/Player_data/Name_section"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_auyri")
+
+[node name="name_lbl" type="Label" parent="Body/Profile/user_data/card/Player_data/Name_section"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 50
+text = "Name Surname"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Work_section" type="HBoxContainer" parent="Body/Profile/user_data/card/Player_data"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Work_icon" type="TextureRect" parent="Body/Profile/user_data/card/Player_data/Work_section"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_elt22")
+
+[node name="work_lbl" type="Label" parent="Body/Profile/user_data/card/Player_data/Work_section"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 45
+text = "Work"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Year_section" type="HBoxContainer" parent="Body/Profile/user_data/card/Player_data"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Year_icon" type="TextureRect" parent="Body/Profile/user_data/card/Player_data/Year_section"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_wfqgm")
+
+[node name="age_lbl" type="Label" parent="Body/Profile/user_data/card/Player_data/Year_section"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 45
+text = "999 years"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="user_photo" type="Panel" parent="Body/Profile/user_data/card"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -550.0
+offset_right = -38.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_waayo")
+script = ExtResource("8_4o0vh")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("9_joyir")
+
+[node name="fav_img" type="TextureRect" parent="Body/Profile/user_data/card"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("10_c45wl")
+expand_mode = 1
+
+[node name="fav_btn" type="Button" parent="Body/Profile/user_data/card/fav_img"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="Work_goal_section" type="HBoxContainer" parent="Body/Profile"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+alignment = 1
+
+[node name="Work_icon" type="TextureRect" parent="Body/Profile/Work_goal_section"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("18_c45wl")
+expand_mode = 1
+
+[node name="work_lbl" type="Label" parent="Body/Profile/Work_goal_section"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 45
+text = "Work"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="submenu" type="MarginContainer" parent="Body/Profile"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="card" type="Panel" parent="Body/Profile/submenu"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_pij1d")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Body/Profile/submenu/card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Panel" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_pij1d")
+
+[node name="state_mind_img" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_elt22")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(5, 128)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_pij1d")
+
+[node name="Panel" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tlr8f")
+
+[node name="indicators_section" type="VBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="work_section2" type="HBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+alignment = 1
+
+[node name="friend_img" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section/work_section2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("11_5x82o")
+expand_mode = 1
+
+[node name="friend_progress" type="ProgressBar" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section/work_section2"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_qdhu8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_akvuu")
+max_value = 600.0
+step = 1.0
+value = 300.0
+show_percentage = false
+
+[node name="work_section3" type="HBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+alignment = 1
+
+[node name="chemistry_img" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section/work_section3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("12_d5l0u")
+expand_mode = 1
+
+[node name="chemistry_progress" type="ProgressBar" parent="Body/Profile/submenu/card/HBoxContainer/HBoxContainer/indicators_section/work_section3"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_qdhu8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nxxtp")
+max_value = 600.0
+step = 1.0
+value = 400.0
+show_percentage = false
+
+[node name="effects_section" type="HBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="happy_section" type="VBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/effects_section"]
+layout_mode = 2
+alignment = 1
+
+[node name="happy_pnl" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/happy_section"]
+custom_minimum_size = Vector2(84, 84)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("13_5ur2o")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/happy_section/happy_pnl"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+texture = ExtResource("14_elt22")
+expand_mode = 1
+
+[node name="happy_lbl" type="Label" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/happy_section"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("13_5ur2o")
+text = "+5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="money_section" type="VBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/effects_section"]
+layout_mode = 2
+alignment = 1
+
+[node name="money_pnl" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/money_section"]
+custom_minimum_size = Vector2(84, 84)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("13_5ur2o")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/money_section/money_pnl"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+texture = ExtResource("15_q6e0u")
+
+[node name="money_lbl" type="Label" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/money_section"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("13_5ur2o")
+text = "+5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="effect_f_section" type="VBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/effects_section"]
+layout_mode = 2
+alignment = 1
+
+[node name="effect_pnl" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_f_section"]
+custom_minimum_size = Vector2(84, 84)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("17_waayo")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_f_section/effect_pnl"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+texture = ExtResource("17_b86vt")
+expand_mode = 1
+
+[node name="effect_f_lbl" type="Label" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_f_section"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("17_waayo")
+text = "+5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="effect_s_section" type="VBoxContainer" parent="Body/Profile/submenu/card/HBoxContainer/effects_section"]
+layout_mode = 2
+alignment = 1
+
+[node name="effect_pnl" type="Panel" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_s_section"]
+custom_minimum_size = Vector2(84, 84)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("17_waayo")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_s_section/effect_pnl"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 10.0
+offset_right = 32.0
+offset_bottom = 74.0
+grow_horizontal = 2
+texture = ExtResource("17_b86vt")
+expand_mode = 1
+
+[node name="effect_s_lbl" type="Label" parent="Body/Profile/submenu/card/HBoxContainer/effects_section/effect_s_section"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pd82p")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("17_waayo")
+text = "+5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="separator" type="MarginContainer" parent="Body/Profile"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="card" type="Panel" parent="Body/Profile/separator"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("13_5ur2o")
+
+[node name="Item_container" type="MarginContainer" parent="Body/Profile"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/Profile/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Profile/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Menu" type="PanelContainer" parent="Body"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rhonr")
+
+[node name="Principal" type="HBoxContainer" parent="Body/Menu"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="home_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m16qa")
+
+[node name="user_photo" type="Panel" parent="Body/Menu/Principal/home_pnl"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2tpd")
+script = ExtResource("8_4o0vh")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("9_joyir")
+
+[node name="home_btn" type="Button" parent="Body/Menu/Principal/home_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="contacts_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_abm8h")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/contacts_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_o2fia")
+expand_mode = 1
+
+[node name="contacts_btn" type="Button" parent="Body/Menu/Principal/contacts_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/contacts_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_auyri")
+
+[node name="contact_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m16qa")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/contact_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_m16qa")
+expand_mode = 1
+
+[node name="contact_btn" type="Button" parent="Body/Menu/Principal/contact_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/contact_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_auyri")
+
+[node name="fav1_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m16qa")
+
+[node name="user_photo" type="Panel" parent="Body/Menu/Principal/fav1_pnl"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_14q7x")
+script = ExtResource("8_4o0vh")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("9_joyir")
+
+[node name="fav1_btn" type="Button" parent="Body/Menu/Principal/fav1_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/fav1_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_auyri")
+
+[node name="fav2_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m16qa")
+
+[node name="user_photo" type="Panel" parent="Body/Menu/Principal/fav2_pnl"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7p2cc")
+script = ExtResource("8_4o0vh")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("9_joyir")
+
+[node name="fav2_btn" type="Button" parent="Body/Menu/Principal/fav2_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_pij1d")
+theme_override_styles/hover = ExtResource("4_pij1d")
+theme_override_styles/pressed = ExtResource("4_pij1d")
+theme_override_styles/normal = ExtResource("4_pij1d")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/fav2_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_auyri")
+
+[connection signal="pressed" from="Body/Profile/user_data/card/fav_img/fav_btn" to="." method="_on_fav_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/home_pnl/home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/contacts_pnl/contacts_btn" to="." method="_on_contacts_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/fav1_pnl/fav1_btn" to="." method="_on_fav_1_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/fav2_pnl/fav2_btn" to="." method="_on_fav_2_btn_pressed"]

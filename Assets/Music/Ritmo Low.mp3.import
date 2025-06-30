@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnu6cy8407oss"
+path="res://.godot/imported/Ritmo Low.mp3-aa0619bc15a0089b48937aec467a0ebe.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Ritmo Low.mp3"
+dest_files=["res://.godot/imported/Ritmo Low.mp3-aa0619bc15a0089b48937aec467a0ebe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

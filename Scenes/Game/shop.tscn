@@ -1,0 +1,514 @@
+[gd_scene load_steps=21 format=3 uid="uid://dh40ws1du3kr7"]
+
+[ext_resource type="Script" uid="uid://y2deahrjl6n3" path="res://Scripts/Game/shop.gd" id="1_5pvpo"]
+[ext_resource type="PackedScene" uid="uid://d1ejixc36j41k" path="res://Scenes/UI/header.tscn" id="2_jhnqf"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="3_swcpt"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="4_12kcv"]
+[ext_resource type="Texture2D" uid="uid://dmr6d2dbkncc0" path="res://Assets/Images/Upgrades/clock.png" id="5_5pvpo"]
+[ext_resource type="Script" uid="uid://b0y3pwe67c2hl" path="res://addons/TextureRectRounded/TextureRectRounded.gd" id="5_i1rer"]
+[ext_resource type="Texture2D" uid="uid://cgoufcjlvl2h3" path="res://Assets/Images/People/girl6.png" id="6_5pvpo"]
+[ext_resource type="Texture2D" uid="uid://cq1ixdqd4hddu" path="res://Assets/Images/Upgrades/cloth4.png" id="6_nllvb"]
+[ext_resource type="Texture2D" uid="uid://irehqn2135wn" path="res://Assets/Images/Upgrades/food.png" id="7_ifexc"]
+[ext_resource type="Texture2D" uid="uid://2hdvrvbocbei" path="res://Assets/Images/Upgrades/medicine3.png" id="8_7weey"]
+[ext_resource type="Texture2D" uid="uid://s170l1siku37" path="res://Assets/Images/Upgrades/furniture.png" id="9_nllvb"]
+[ext_resource type="Texture2D" uid="uid://bjrtqaoumakyd" path="res://Assets/Images/Upgrades/real.png" id="12_ifexc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vffly"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5k8v"]
+bg_color = Color(0.645885, 0.788183, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_3w26w"]
+font = ExtResource("3_swcpt")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nllvb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifexc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7weey"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0j2w"]
+bg_color = Color(0.505882, 0.47451, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcuvc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pvpo")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.239216, 0.352941, 1)
+
+[node name="Body" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderUI" parent="Body" instance=ExtResource("2_jhnqf")]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+
+[node name="Menu_header_pnl" type="Panel" parent="Body"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vffly")
+
+[node name="MarginContainer" type="MarginContainer" parent="Body/Menu_header_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Panel" type="Panel" parent="Body/Menu_header_pnl/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g5k8v")
+
+[node name="Menu_header_lbl" type="Label" parent="Body/Menu_header_pnl/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "#MENU WINDOW"
+label_settings = SubResource("LabelSettings_3w26w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close_menu_btn" type="Button" parent="Body/Menu_header_pnl/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("3_swcpt")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_12kcv")
+theme_override_styles/hover_pressed = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+text = "X"
+
+[node name="Shop" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_container" type="MarginContainer" parent="Body/Shop"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/Shop/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Shop/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Menu" type="PanelContainer" parent="Body"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nllvb")
+
+[node name="Principal" type="HBoxContainer" parent="Body/Menu"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="home_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifexc")
+
+[node name="user_photo" type="Panel" parent="Body/Menu/Principal/home_pnl"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7weey")
+script = ExtResource("5_i1rer")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("6_5pvpo")
+
+[node name="home_btn" type="Button" parent="Body/Menu/Principal/home_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="cloth_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifexc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/cloth_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_nllvb")
+expand_mode = 1
+
+[node name="cloth_btn" type="Button" parent="Body/Menu/Principal/cloth_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/cloth_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[node name="upgrades_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gcuvc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/upgrades_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_5pvpo")
+expand_mode = 1
+
+[node name="upgrades_btn" type="Button" parent="Body/Menu/Principal/upgrades_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/upgrades_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[node name="items_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gcuvc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/items_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_nllvb")
+expand_mode = 1
+
+[node name="items_btn" type="Button" parent="Body/Menu/Principal/items_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/items_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[node name="food_pnl" type="Panel" parent="Body/Menu/Principal"]
+visible = false
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifexc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/food_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_ifexc")
+expand_mode = 1
+
+[node name="food_btn" type="Button" parent="Body/Menu/Principal/food_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/food_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[node name="medicine_pnl" type="Panel" parent="Body/Menu/Principal"]
+visible = false
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifexc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/medicine_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_7weey")
+expand_mode = 1
+
+[node name="medicine_btn" type="Button" parent="Body/Menu/Principal/medicine_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/medicine_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[node name="real_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifexc")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/real_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_ifexc")
+expand_mode = 1
+
+[node name="real_btn" type="Button" parent="Body/Menu/Principal/real_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_12kcv")
+theme_override_styles/hover = ExtResource("4_12kcv")
+theme_override_styles/pressed = ExtResource("4_12kcv")
+theme_override_styles/normal = ExtResource("4_12kcv")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/real_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0j2w")
+
+[connection signal="pressed" from="Body/Menu_header_pnl/MarginContainer/Panel/Close_menu_btn" to="." method="_on_close_menu_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/home_pnl/home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/cloth_pnl/cloth_btn" to="." method="_on_cloth_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/upgrades_pnl/upgrades_btn" to="." method="_on_upgrades_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/items_pnl/items_btn" to="." method="_on_items_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/food_pnl/food_btn" to="." method="_on_food_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/medicine_pnl/medicine_btn" to="." method="_on_medicine_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/real_pnl/real_btn" to="." method="_on_real_btn_pressed"]

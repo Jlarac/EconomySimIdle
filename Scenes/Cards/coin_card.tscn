@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://svqlchrp7nt6"]
+
+[ext_resource type="Script" uid="uid://bpegop6rw0e46" path="res://Scripts/Cards/card_coin.gd" id="1_i227p"]
+[ext_resource type="Texture2D" uid="uid://beg1bnnalbhg" path="res://Assets/Images/Menu/coin_.png" id="2_ra0be"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="3_35o8y"]
+
+[sub_resource type="Animation" id="Animation_8ibkm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/item:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/item:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i227p"]
+resource_name = "float_up"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/item:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(58, -708)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/item:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1.83333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vofiw"]
+_data = {
+&"RESET": SubResource("Animation_8ibkm"),
+&"float_up": SubResource("Animation_i227p")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_i227p")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("3_35o8y")
+
+[node name="item" type="Sprite2D" parent="Panel"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ra0be")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vofiw")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,58 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="EconomySimIdle"
+run/main_scene="res://Scenes/UI/title_screen.tscn"
+config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://bhno1x13k7jk"
+config/icon="uid://d0lqh0kjcihg5"
+boot_splash/minimum_display_time=1000
+
+[autoload]
+
+Data="*res://Scripts/Game/Data.gd"
+Characters="*res://Scripts/Classes/characters.gd"
+GlobalTime="*res://Scripts/Classes/time.gd"
+BackgroundMusic="*res://Scenes/UI/background_music.tscn"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=2408
+window/size/window_width_override=540
+window/size/window_height_override=1204
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/TextureRectRounded/plugin.cfg")
+
+[gui]
+
+theme/custom_font="res://Resources/Fonts/VarelaRound-Regular.ttf"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Config/Location/Titles_and_names.en.translation", "res://Config/Location/Titles_and_names.es.translation")
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

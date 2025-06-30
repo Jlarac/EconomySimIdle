@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://de83g58di0f7e"]
+
+[ext_resource type="Script" uid="uid://bkrd4mhmxhde6" path="res://Scripts/UI/title_screen.gd" id="1_qem8u"]
+[ext_resource type="Texture2D" uid="uid://hon3kv8p4tfq" path="res://Assets/Images/Logos/5.png" id="5_wv540"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="9_k6xta"]
+[ext_resource type="Texture2D" uid="uid://33hv60pg5ogi" path="res://Assets/Images/Logos/logo_godot.png" id="77_i4tgm"]
+[ext_resource type="Texture2D" uid="uid://d0lqh0kjcihg5" path="res://Assets/Images/Logos/principal_logo.png" id="82_f1vpt"]
+[ext_resource type="Texture2D" uid="uid://nn3if7egfxms" path="res://Assets/Images/Logos/principal_name.png" id="83_wbiyf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xx47"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wv540"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsf7a"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Title_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qem8u")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6xx47")
+
+[node name="All_Logos" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Game_logo_pnl" type="Panel" parent="All_Logos"]
+custom_minimum_size = Vector2(1080, 716.8)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_k6xta")
+
+[node name="Game_logo" type="TextureRect" parent="All_Logos/Game_logo_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.4
+offset_top = -358.4
+offset_right = 665.6
+offset_bottom = 665.6
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("82_f1vpt")
+
+[node name="Game_name_pnl" type="Panel" parent="All_Logos"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_k6xta")
+
+[node name="Game_name" type="TextureRect" parent="All_Logos/Game_name_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -140.0
+offset_right = 500.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("83_wbiyf")
+
+[node name="Separator" type="Panel" parent="All_Logos"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_k6xta")
+
+[node name="Companies" type="HBoxContainer" parent="All_Logos"]
+layout_mode = 2
+alignment = 1
+
+[node name="Company_logo_pnl" type="Panel" parent="All_Logos/Companies"]
+custom_minimum_size = Vector2(540, 300)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_k6xta")
+
+[node name="Company_logo" type="TextureRect" parent="All_Logos/Companies/Company_logo_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -70.0
+offset_right = 250.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wv540")
+
+[node name="Godot_logo_pnl" type="Panel" parent="All_Logos/Companies"]
+custom_minimum_size = Vector2(340, 500)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_k6xta")
+
+[node name="Godot_logo" type="TextureRect" parent="All_Logos/Companies/Godot_logo_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -172.375
+offset_right = 896.0
+offset_bottom = 998.625
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("77_i4tgm")
+
+[node name="MarginContainer" type="MarginContainer" parent="All_Logos"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="ProgressBar" type="ProgressBar" parent="All_Logos/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_wv540")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dsf7a")
+value = 50.0
+show_percentage = false

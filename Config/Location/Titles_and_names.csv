@@ -1,0 +1,415 @@
+keys,es,en
+todo_title,Cuidado personal,Self care
+business_title,Negocios,Business
+education_title,Educacion,Education
+work_title,Trabajo,Work
+stocks_title,Acciones,Stocks
+coin_title,Moneda,Coin
+bitcoin_title,Cripto,Crypto
+metal_title,Metales,Metals
+phone_title,Telefono,Phone
+people_title,Contactos,Contacts
+supermarket_title,Supermercado,Supermarket
+house_title,Casas,Houses
+car_title,Carros,Cars
+realshop_title,Tienda,Shop
+colection_title,Colecciones,Colections
+basic_study,Educacion Media Superior,High School
+driver_study,Curso de Manejo,Driving Course
+heavy_study,Manejo de Camiones Pesado,Heavy Truck Handling
+navegation_study,Introduccion a la Nautica,Introduction to Nautical Studies
+aero_study,Aerodinamica Elemental,Elementary Aerodynamics
+kitchen_study,Tecnicas de Coccion,Cooking Techniques
+law_study,Introduccion al Derecho,Introduction to Law
+finance_study,Principios de Economia,Principles of Economics
+draw_study,Dibujo Tecnico,Technical Drawing
+phisic_study,Fisica,Physics
+paint_study,Pintura al Oleo,Oil Painting
+guitar_study,Clase de Guitarra,Guitar Class
+piano_study,Clase de Piano,Piano Class
+saxofon_study,Clase de Saxofon,Saxophone Class
+violin_study,Clase de Violin,Violin Class
+drums_study,Clase de Bateria,Drum Class
+sing_study,Clase de Canto,Singing Class
+acting_study,Clase de Actuacion,Acting Class
+football_study,Clase de Football,Football Class
+soccer_study,Clase de Futbol,Soccer Class
+basquetball_study,Clase de Basquetbol,Basketball Class
+voleiball_study,Clase de Voleibol,Volleyball Class
+tenis_study,Clase de Tenis,Tennis Class
+golf_study,Clade de Golf,Golf Class
+marine_study,Manejo de Barcos,Boat Handling Course
+pilot_study,Piloto de Aviones,Aircraft Pilot Course
+technician_study,Tecnico Superior Universitario,University Technician
+people_study,Curso de Manejo de Personal,Personnel Management Course
+business_study,Negocios,Business
+gastronomy_study,Gastronomia,Gastronomy
+medicine_study,Medicina,Medicine
+specialist_study,Especialidad Medica,Medical Specialty
+lawyer_study,Abogacia,Law
+account_study,Contaduria,Accounting
+architect_study,Arquitectura,Architecture 
+engineer_study,Ingenieria,Engineer
+politician_study,Ciencias Politicas,Political Sciences
+science_study,Investigacion y Desarrollo,Research And Development
+1_month,Ene,Jan
+2_month,Feb,Feb
+3_month,Mar,Mar
+4_month,Apr,Apr
+5_month,May,May
+6_month,Jun,Jun
+7_month,Jul,Jul
+8_month,Ago,Aug
+9_month,Sep,Sep
+10_month,Oct,Oct
+11_month,Nov,Nov
+12_month,Dic,Dec
+life_goal,Meta De Vida,Goal Life
+friend_skill,Socializacion,Socialization
+love_skill,Relaciones,Relationship
+learn_skill,Habilidad,Skills
+accept_btn,Aceptar,Accept
+no_work,Sin trabajo,Unemployed
+cleaning_work,Auxiliar De Limpieza,Cleaning Assistant
+warehouse_helper,Ayudante De Almacén,Warehouse Assistant
+construction_worker,Trabajador De Construcción,Construction Worker
+waiter,Mesero,Waiter
+security_guard,Vigilante De Seguridad,Security Guard
+private_security_driver,Chofer De Seguridad Privada,Private Security Driver
+sales_assistant,Asistente De Ventas,Sales Assistant
+machinery_operator,Operador De Maquinaria,Machinery Operator
+event_worker,Trabajador De Eventos,Event Worker
+shift_supervisor,Supervisor De Turno,Shift Supervisor
+food_delivery_driver,Conductor De Reparto De Comida,Food Delivery Driver
+package_delivery_driver,Conductor De Reparto De Paquetes,Package Delivery Driver
+taxi_driver,Conductor De Taxi O Rideshare,Taxi Or Rideshare Driver
+driver_trainer,Formador De Conductores,Driver Trainer
+school_transport_driver,Conductor De Transporte Escolar,School Transport Driver
+public_service_driver,Conductor De Servicios Públicos,Public Service Driver
+bus_driver,Conductor De Autobús,Bus Driver
+cargo_vehicle_driver,Conductor De Vehículos De Carga,Cargo Vehicle Driver
+special_cargo_driver,Conductor De Cargas Especiales,Special Cargo Driver
+f1_driver,Conductor De F1,F1 Driver
+maintenance_technician,Técnico De Mantenimiento,Maintenance Technician
+support_technician,Técnico De Soporte,Support Technician
+repair_technician,Técnico De Reparaciones,Repair Technician
+electrician_technician,Técnico Electricista,Electrician Technician
+mechanical_technician,Técnico Mecánico,Mechanical Technician
+network_technician,Técnico De Redes,Network Technician
+hvac_technician,Técnico De Hvac,Hvac Technician
+laboratory_technician,Técnico De Laboratorio,Laboratory Technician
+production_technician,Técnico De Producción,Production Technician
+technical_supervisor,Supervisor Técnico,Technical Supervisor
+navigation_student,Estudiante De Navegación,Navigation Student
+marina_intern,Practicante De Marina,Marina Intern
+sailor,Marinero,Sailor
+small_boat_pilot,Piloto De Bote Pequeño,Small Boat Pilot
+tour_boat_captain,Capitán De Bote De Turismo,Tour Boat Captain
+yacht_pilot,Piloto De Yate,Yacht Pilot
+cargo_ship_captain,Capitán De Barco De Carga,Cargo Ship Captain
+passenger_ship_pilot,Piloto De Barco De Pasajeros,Passenger Ship Pilot
+navigation_instructor,Instructor De Navegación,Navigation Instructor
+research_vessel_captain,Capitán De Buque De Investigación,Research Vessel Captain
+aviation_student,Estudiante De Aviación,Aviation Student
+private_pilot,Piloto Privado,Private Pilot
+regional_airline_pilot,Piloto De Línea Regional,Regional Airline Pilot
+cargo_pilot,Piloto De Carga,Cargo Pilot
+airline_pilot,Piloto De Aerolínea,Airline Pilot
+flight_instructor,Instructor De Vuelo,Flight Instructor
+business_jet_pilot,Piloto De Aeronaves De Negocios,Business Jet Pilot
+helicopter_pilot,Piloto De Helicóptero,Helicopter Pilot
+cargo_aircraft_pilot,Piloto De Aviones De Carga,Cargo Aircraft Pilot
+test_pilot,Piloto De Pruebas,Test Pilot
+fine_arts_student,Estudiante De Bellas Artes,Fine Arts Student
+emerging_artist,Artista Emergente,Emerging Artist
+illustrator_designer,Ilustrador/Designer,Illustrator/Designer
+mixed_media_artist,Artista De Medios Mixtos,Mixed Media Artist
+gallery_curator,Curador De Galería,Gallery Curator
+recognized_artist,Artista Reconocido,Recognized Artist
+arts_teacher,Profesor De Artes,Arts Teacher
+art_historian,Historiador Del Arte,Art Historian
+art_commissioner,Comisario De Arte,Art Commissioner
+international_artist,Artista Internacional,International Artist
+kitchen_helper,Ayudante De Cocina,Kitchen Helper
+junior_cook,Cocinero Junior,Junior Cook
+cook,Cocinero,Cook
+chef_de_partie,Chef De Partie,Chef De Partie
+sous_chef,Sous Chef,Sous Chef
+executive_chef,Chef Ejecutivo,Executive Chef
+gastronomic_consultant,Consultor Gastronómico,Gastronomic Consultant
+restaurant_owner,Propietario De Restaurante,Restaurant Owner
+cooking_instructor,Instructor De Cocina,Cooking Instructor
+gastronomic_critic,Crítico Gastronómico,Gastronomic Critic
+medical_student,Estudiante De Medicina,Medical Student
+intern_doctor,Médico Interno,Intern Doctor
+resident_doctor,Médico Residente,Resident Doctor
+specialist_doctor,Médico Especialista,Specialist Doctor
+emergency_physician,Médico De Emergencias,Emergency Physician
+family_physician,Médico De Familia,Family Physician
+medical_researcher,Investigador Médico,Medical Researcher
+medical_professor,Profesor De Medicina,Medical Professor
+medical_director,Director Médico,Medical Director
+public_health_consultant,Consultor De Salud Pública,Public Health Consultant
+legal_intern,Pasante Legal,Legal Intern
+junior_lawyer,Abogado Junior,Junior Lawyer
+defense_lawyer,Abogado De Defensa,Defense Lawyer
+corporate_lawyer,Abogado Corporativo,Corporate Lawyer
+family_lawyer,Abogado De Familia,Family Lawyer
+senior_lawyer,Abogado Senior,Senior Lawyer
+firm_partner,Socio De La Firma,Firm Partner
+supreme_court_judge,Juez De La Suprema Corte,Supreme Court Judge
+supreme_court_minister,Ministro De La Suprema Corte,Supreme Court Minister
+supreme_court_president,Presidente De La Suprema Corte,Supreme Court President
+accounting_assistant,Asistente Contable,Accounting Assistant
+junior_accountant,Contador Jr,Junior Accountant
+payroll_accountant,Contador De Nomina,Payroll Accountant
+accounts_payable_accountant,Contador De Cuentas Por Pagar,Accounts Payable Accountant
+accounts_receivable_accountant,Contador De Cuentas Por Cobrar,Accounts Receivable Accountant
+tax_accountant,Contador De Impuestos,Tax Accountant
+senior_accountant,Contador Senior,Senior Accountant
+controller,Controller,Controller
+financial_director,Director Financiero,Financial Director
+central_bank_president,Presidente Del Banco Central,Central Bank President
+design_assistant,Asistente De Diseño,Design Assistant
+junior_designer,Diseñador Junior,Junior Designer
+junior_architect,Arquitecto Junior,Junior Architect
+senior_architect,Arquitecto Senior,Senior Architect
+design_consultant,Consultor De Diseño,Design Consultant
+sustainability_specialist,Especialista En Sostenibilidad,Sustainability Specialist
+urban_architect,Arquitecto Urbanista,Urban Architect
+project_director,Director De Proyectos,Project Director
+architecture_professor,Profesor De Arquitectura,Architecture Professor
+architecture_researcher,Investigador En Arquitectura,Architecture Researcher
+engineering_intern,Practicante De Ingeniería,Engineering Intern
+junior_engineer,Ingeniero Junior,Junior Engineer
+design_engineer,Ingeniero De Diseño,Design Engineer
+project_engineer,Ingeniero De Proyectos,Project Engineer
+senior_engineer,Ingeniero Senior,Senior Engineer
+engineering_consultant,Consultor De Ingeniería,Engineering Consultant
+engineering_manager,Gerente De Ingeniería,Engineering Manager
+engineering_researcher,Investigador En Ingeniería,Engineering Researcher
+innovation_director,Director De Innovación,Innovation Director
+engineering_professor,Profesor De Ingeniería,Engineering Professor
+political_assistant,Asistente Político,Political Assistant
+political_researcher,Investigador Político,Political Researcher
+campaign_consultant,Consultor De Campaña,Campaign Consultant
+legislative_advisor,Consejero Legislativo,Legislative Advisor
+local_politician,Político Local,Local Politician
+senator_representative,Senador/Representante,Senator/Representative
+minister_governor,Ministro/Gobernador,Minister/Governor
+ambassador,Embajador,Ambassador
+political_party_leader,Líder De Partido Político,Political Party Leader
+president,Presidente,President
+research_assistant,Asistente De Investigación,Research Assistant
+junior_researcher,Investigador Junior,Junior Researcher
+senior_researcher,Investigador Senior,Senior Researcher
+laboratory_scientist,Científico De Laboratorio,Laboratory Scientist
+field_scientist,Científico De Campo,Field Scientist
+university_professor,Profesor Universitario,University Professor
+scientific_consultant,Consultor Científico,Scientific Consultant
+research_group_leader,Líder De Grupo De Investigación,Research Group Leader
+research_institute_director,Director De Instituto De Investigación,Research Institute Director
+astronaut,Astronauta,Astronaut
+find_house_for_rent,Buscar Casas En Renta,Search Rental House
+find_house_to_buy,Buscar Casas En Venta,Search House For Sale
+find_houses,Buscar Casa,Find A House
+rental_houses,En renta,For rent
+sale_houses,En venta,On sale
+sell_for,Vender por,Sell for
+buy_for,Compra por,Purchase for
+rent_for,Renta por,Rent for
+in_rent,En renta actualmente,Currently rented
+to_live_for,Vivir,Live
+to_sale_for,Vender,Sell
+own_houses,CASAS PROPIAS,OWN HOUSES
+stove_basic_fur,ESTUFA BASICA,BASIC STOVE
+stove_gas_fur,ESTUFA DE GAS,GAS STOVE
+stove_electric_fur,ESTUFA ELECTRICA,ELECTRIC STOVE
+stove_induction_fur,ESTUFA DE INDUCCION,INDUCTION STOVE
+stove_intelligent_fur,ESTUFA INTELIGENTE,INTELLIGENT STOVE
+fridge_basic_fur,REFRIGERADOR BASICO,BASIC FRIDGE
+fridge_medium_fur,REFRIGERADOR MEDIANO,MEDIUM FRIDGE
+fridge_water_fur,REFRIGERADOR CON ADITAMENTOS,FRIDGE WITH ADDONS
+fridge_big_fur,REFRIGERADOR GRANDE,BIG FRIDGE
+fridge_doble_fur,REFRIGERADOR 3 PUERTAS,3 DOORS FRIDGE
+floor_concrete_fur,PISO DE CEMENTO,CONCRETE FLOOR
+floor_tile_fur,PISO DE AZULEJO BASICO,BASIC TILE FLOOR
+floor_wood_fur,PISO DE MADERA,WOOD FLOOR
+floor_bigtile_fur,PISO DE AZULEJO GRANDE,BIG TILE FLOOR
+floor_marble_fur,PISO DE MARMOL,MARBLE FLOOR
+wall_plaster_fur,PARED DE YESO,PLASTER WALL
+wall_wood_fur,PARED DE MADERA,WOOD WALL
+wall_concrete_fur,PARED DE CONCRETO,CONCRETE WALL
+wall_tile_fur,PARED CON AZULEJO,TILED WALL
+wall_marble_fur,PARED DE MARMOL,MARBLE WALL
+Need_house,NECESITAS UNA CASA,YOU NEED A HOUSE
+enviroment_title,Ambientes,Enviroments
+price_title,Precio,Price
+see_details,Ver detalles,See details
+less_details,Menos detalles,Less details
+size_title,Tamaño,Size
+kitchen_room,COCINA,KITCHEN
+bath_room,BAÑO,BATHROOM
+cinema_room,CINE,CINEMA
+game_room,SALA DE JUEGOS,GAMES ROOM
+gym_room,GIMNASIO,GYM
+hall_room,SALON,LIVING
+laundry_room,LAVANDERIA,LAUNDRY
+library_room,BIBLIOTECA,LIBRARY
+office_room,OFICINA,OFFICE
+room_room,HABITACION,ROOM
+spa_room,SPA,SPA
+table_room,COMEDOR,DINING ROOM
+house_room,CASA,HOUSE
+no_house,Sin hogar,Homeless
+old,Casa vieja,Old house
+cabin,Casa de campo,Country house
+small_apartment,Departamento Pequeño,Small apartment
+loading_game_saves,CARGANDO PARTIDAS…,LOADING GAME SAVES…
+create_save_file,CREAR PARTIDA,NEW GAME
+new_game,JUEGO NUEVO,NEW GAME
+new_name_player,NOMBRE:,NAME:
+new_surname_player,APELLIDO:,SURNAME:
+outgoing,Extrovertido,Outgoing
+social,Social,Social
+introvert,Introvertido,Introvert
+romantic,Romantico,Romantic
+gentle,Amable,Gentle
+aromantic,Frio,Reserved
+perfeccionist,Perfeccionista,Perfeccionist
+moderate,Responsable,Responsible
+carefree,Despreocupado,Carefree
+charging_world,Creando Mundo,Creating World
+people_born,Gente Naciendo,People Being Born
+year_charging,AÑO:,YEAR:
+unlock_,Desbloquea,Unlock
+works_,Trabajos,Works
+basic_,Basicos,Basic 
+completed_,Completado,Completed
+driver_,Conductor,Driver
+health_,Salud,Health
+happy_,Feliz,Happy
+energy_,Energia,Energy
+day_,Dia,Day
+days_,Dias,Days
+month_,Mes,Month
+months_,Meses,Months
+year_,Año,Year
+years_,Años,Years
+call_,Llamar,Call
+no_phone_,Necesitas un telefono,You need a phone
+speak_,Charlar,Chat
+listen_,Escuchar,Listen
+support_,Consolar,Comfort
+joke_,Bromear,Tease
+apologize_,Disculparse,Apologize
+argue_,Discutir,Discuss
+fight_,Pelear,Argue
+secret_,Hablar de Secretos,Share Secret
+celebrate_,Felicitar,Congratulate
+help_out_,Ayudar,Help
+flirting_,Coquetear,Flirt
+sweetheart_,Besar,Kiss
+love_,Acurrucarse,Snuggle
+sex_,Cuchi Cuchi,Cuchi Cuchi
+goto_,Invitar a Salir,Ask Out
+relation_,Proponer Relacion,Propose Relationship
+compromise_,Pedir Comprometerse,Propose Marriage
+marry_,Casarse,Get Married
+lover_,Volver Amante,Become Lovers
+gift_,Dar regalo,Give Gift
+events_,Invitar a Evento,Invite to Event
+break_,Romper Relacion,Break Up
+accept_,Aceptar,Accept
+no_friends_,Sin amigos,Friendless
+not_available_,No disponible,Not available
+used_cloth_,Ropa usada,Used cloth
+cheap_cloth_,Ropa barata,Cheap cloth
+imitation_cloth_,Ropa de imitacion,Imitation cloth
+branded_cloth_,Ropa de marca,Branded cloth
+tailored_cloth_,Ropa de sastre,Tailored cloth
+soup_food_,Sopa instantanea,Instant soup
+fast_food_,Comida rapida,Fast food
+home_food_,Comida casera,Home food
+vegan_food_,Comida vegana,Vegan food
+chef_food_,Comida de chef,Chef food
+generic_medicine_,Medicina generica,Generic medicine
+oldpatent_medicine_,Medicina de patente vieja,Old patent medicine
+patent_medicine_,Medicina de patente,Patent medicine
+specialist_medicine_,Medicine de especialidad,Specialist medicine
+multivitamin_medicine_,Multivitaminico,Multivitamin
+select_,Seleccinar,Select
+buy_,Comprar,Buy
+cancel_,Cancelar,Cancel
+selected_,Seleccionado,Selected
+normal_book_,Libreta,Book
+normal_agenda_,Agenda,Agenda
+lether_agenda_,Agenda de cuero,Lether agenda
+executive_agenda_,Agenda ejecutiva,Executive agenda
+digital_agenda,Agenda digital,Digital agenda
+timer_clock_,Temporizador,Timer
+cronometer_clock_,Cronometro,Cronometer
+alarm_clock_,Alarma,Alarm
+radio_clock_,Radio,Radio
+smartwatch_clock_,Smartwatch,Smartwatch
+public_phone_,Telefono publico,Public phone
+old_phone_,Telefono viejo,Old phone
+home_phone_,Telefono moderno,Modern phone
+hand_phone_,Celular,Cellphone
+smart_phone_,Smartphone,Smartphone
+old_computer_,Computadora vieja,Old PC
+desk_computer_,Computadora de escritorio,Desktop PC
+education_computer_,Computadora de escuela,Education PC
+work_computer_,Computadora de trabajo,Work PC
+gamer_computer_,Computadora gamer,Gamer PC
+ukelele_,Ukelele,Ukelele
+acustic_guitar_,Guitarra acustica,Acustic guitar
+electric_guitar_,Guitarra electrica,Electric guitar
+bajo_,Bajo,Bajo
+double_guitar_,Guitarra doble,Double guitar
+improve_hours_two,Mejora clics a 2 horas,Improve clics  to 2 hours
+improve_hours_three,Mejora clics a 3 horas,Improve clics  to 3 hours
+improve_hours_four,Mejora clics a 4 horas,Improve clics  to 4 hours
+improve_hours_six,Mejora clics a 6 horas,Improve clics  to 6 hours
+improve_hours_twelve,Mejora clics a 12 horas,Improve clics  to 12 hours
+improve_seconds_one,Mejora el velocidad de reloj 33%,Improve clock speed 33%
+improve_seconds_two,Mejora el velocidad de reloj 50%,Improve clock speed 50%
+improve_seconds_three,Mejora el velocidad de reloj 67%,Improve clock speed 67%
+improve_seconds_four,Mejora el velocidad de reloj 80%,Improve clock speed 80%
+improve_seconds_five,Mejora el velocidad de reloj 90%,Improve clock speed 90%
+improve_work_one,Mejora el ingreso de trabajo 1%,Improve work salary 1%
+improve_work_two,Mejora el ingreso de trabajo 2%,Improve work salary 2%
+improve_work_three,Mejora el ingreso de trabajo 3%,Improve work salary 3%
+improve_work_four,Mejora el ingreso de trabajo 4%,Improve work salary 4%
+improve_work_five,Mejora el ingreso de trabajo 5%,Improve work salary 5%
+improve_busines_one,Mejora el ingreso de negocios 1%,Improve bussines revenue 1%
+improve_busines_two,Mejora el ingreso de negocios 2%,Improve bussines revenue 2%
+improve_busines_three,Mejora el ingreso de negocios 3%,Improve bussines revenue 3%
+improve_busines_four,Mejora el ingreso de negocios 4%,Improve bussines revenue 4%
+improve_busines_five,Mejora el ingreso de negocios 5%,Improve bussines revenue 5%
+guitar_to_practice_,Guitarra para practicar,Guitar to practice
+money_win_real_state_,Ingreso por Alquiler (Diario):,Rental Income (Daily):
+real_state_market_,Mercado Inmobiliario,Real Estate Market
+my_properties_,Mis Propiedades,My Properties
+upgrade_,Mejora ,Upgrade
+remaining_payments_,Pagos Restantes,Remaining Payments
+paid_,Pagado,Paid
+sure_?,Seguro?,Sure?
+current_,Actual,Current
+select_,Seleccionar,Select
+welcome_,Bienvenido!,Welcome!
+here_start_,Aqui inicia,Here your
+your_journey_,tu viaje,journey begins!
+create_user_,Crear Usuario,Create User
+complete_,Completar,Complete
+write_name_,Define tu Nombre:,Define your Name:
+write_surname_,Define tu Apellido:,Define your Surname:
+choose_your_name_,Elige tu Nombre:,Choose your Name:
+next_,Siguiente,Next
+select_your_photo_,Selecciona tu Foto:,Select your Photo:
+choose_your_personality_,Elige tu Personalidad:,Choose your Personality:
+tutorial_,Iniciar con tutorial?,Start with Tutorial?
+grezul_university_,Universidad de Grezul,Grezul University
+linkin_,LinkIn,LinkIn
+study_completed_,Estudio Completado,Completed Study
+work_available_,Trabajo Disponible,Work Available

@@ -1,0 +1,1108 @@
+[gd_scene load_steps=43 format=3 uid="uid://c1kyefreqpcun"]
+
+[ext_resource type="Script" uid="uid://b0y3pwe67c2hl" path="res://addons/TextureRectRounded/TextureRectRounded.gd" id="1_c5fr4"]
+[ext_resource type="Script" uid="uid://qf0o41ecko0k" path="res://Scripts/Cards/card_house.gd" id="1_d1c2j"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="3_la15b"]
+[ext_resource type="Texture2D" uid="uid://deu6rynst8py4" path="res://Assets/Images/Houses/park1024.png" id="3_ti1bp"]
+[ext_resource type="Texture2D" uid="uid://dju7pphr82tb0" path="res://Assets/Images/UI/own64.png" id="5_bcp0j"]
+[ext_resource type="Texture2D" uid="uid://bpjcpo1v7yfve" path="res://Assets/Images/Menu/hearth_64.png" id="6_xouox"]
+[ext_resource type="Texture2D" uid="uid://wwqe4v8ia8t4" path="res://Assets/Images/Menu/happy_64.png" id="7_qcqxy"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="8_2vwfl"]
+[ext_resource type="Texture2D" uid="uid://bnksgp3m540cr" path="res://Assets/Images/HouseMenu/key.png" id="8_st461"]
+[ext_resource type="Texture2D" uid="uid://cfucw2f4dpi5p" path="res://Assets/Images/HouseMenu/player.png" id="9_3a7cd"]
+[ext_resource type="Texture2D" uid="uid://bcya7xpw4d1u6" path="res://Assets/Images/Menu/bill.png" id="9_fcv43"]
+[ext_resource type="StyleBox" uid="uid://dh134js2fuq74" path="res://Resources/Themes/yellow_button.tres" id="9_gii8k"]
+[ext_resource type="Texture2D" uid="uid://bhx6nt8xif6rv" path="res://Assets/Images/Menu/star64.png" id="9_ncna4"]
+[ext_resource type="Texture2D" uid="uid://dj8mxj45x15mn" path="res://Assets/Images/Rooms/kitchen128.png" id="13_upej5"]
+[ext_resource type="Texture2D" uid="uid://d4h3e3md4d1j4" path="res://Assets/Images/Rooms/table128.png" id="14_v2w4n"]
+[ext_resource type="Texture2D" uid="uid://xb41rrtsm6iy" path="res://Assets/Images/Rooms/bed128.png" id="15_st461"]
+[ext_resource type="Texture2D" uid="uid://br2lbbsc76ouo" path="res://Assets/Images/Rooms/bath128.png" id="16_fcv43"]
+[ext_resource type="Texture2D" uid="uid://byo56m46d1qlw" path="res://Assets/Images/Rooms/hall128.png" id="17_3a7cd"]
+[ext_resource type="Texture2D" uid="uid://bfc1knxrr67fi" path="res://Assets/Images/Rooms/library128.png" id="18_g2gm7"]
+[ext_resource type="Texture2D" uid="uid://bxqn5xikews7f" path="res://Assets/Images/Rooms/gym128.png" id="19_h58pd"]
+[ext_resource type="Texture2D" uid="uid://bbht1ddouvjr0" path="res://Assets/Images/UI/bill_64.png" id="19_igt7t"]
+[ext_resource type="Texture2D" uid="uid://c8a4p68arob5w" path="res://Assets/Images/UI/star64.png" id="20_gii8k"]
+[ext_resource type="Texture2D" uid="uid://co635j74jcu8o" path="res://Assets/Images/Rooms/office128.png" id="20_hjqed"]
+[ext_resource type="StyleBox" uid="uid://csdr42jgxpmxf" path="res://Resources/Themes/green_button.tres" id="21_c1l1l"]
+[ext_resource type="Texture2D" uid="uid://ciba7oskunbp0" path="res://Assets/Images/Rooms/spa128.png" id="21_rpkis"]
+[ext_resource type="Texture2D" uid="uid://bo3clhmyxo58r" path="res://Assets/Images/Rooms/game128.png" id="22_a0fye"]
+[ext_resource type="Texture2D" uid="uid://dbocoded57ygv" path="res://Assets/Images/Rooms/tennis128.png" id="23_fxffx"]
+[ext_resource type="Texture2D" uid="uid://ytkwbyhon41k" path="res://Assets/Images/Rooms/cinema128.png" id="24_kyv51"]
+[ext_resource type="Texture2D" uid="uid://d3jw6ybg8iq3w" path="res://Assets/Images/Rooms/laundry128.png" id="25_choet"]
+[ext_resource type="Texture2D" uid="uid://sqhih1xwamc1" path="res://Assets/Images/Rooms/pool128.png" id="26_tiipq"]
+[ext_resource type="Texture2D" uid="uid://sj1b0xfnfriw" path="res://Assets/Images/Rooms/garden128.png" id="27_q1bip"]
+[ext_resource type="Texture2D" uid="uid://damxmacf5emxa" path="res://Assets/Images/Rooms/parking128.png" id="28_r3wqo"]
+[ext_resource type="Texture2D" uid="uid://b7fyxeggp6b8b" path="res://Assets/Images/Rooms/house128.png" id="29_8yfbx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcv43"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcgks"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y2na"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyxfx"]
+bg_color = Color(0, 0, 0, 0.678431)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3faf3"]
+bg_color = Color(0.0862745, 0.301961, 0.658824, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7gw3"]
+bg_color = Color(0, 0.713726, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wce0s"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0, 0.8, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v056b"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.752941, 0.752941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl8kh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(1024, 1024)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -56.0
+offset_bottom = -1384.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_d1c2j")
+
+[node name="house_photo" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 1
+offset_right = 1024.0
+offset_bottom = 1024.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_fcv43")
+script = ExtResource("1_c5fr4")
+radius_bottom_left = 100
+radius_bottom_right = 100
+radius_top_left = 100
+radius_top_right = 100
+texture = ExtResource("3_ti1bp")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1024, 1024)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qcgks")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 205.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y2na")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="lvl_img" type="TextureRect" parent="Panel/Panel2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("9_ncna4")
+
+[node name="lvl_lbl" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "-5.5"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="health_img" type="TextureRect" parent="Panel/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_xouox")
+
+[node name="health_lbl" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "-5.5"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="happy_img" type="TextureRect" parent="Panel/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_qcqxy")
+
+[node name="happy_lbl" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "-5.5"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel3" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 30.0
+offset_top = 794.0
+offset_right = -30.0
+offset_bottom = 994.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_nyxfx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel3"]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -430.0
+offset_top = 10.0
+offset_right = 430.0
+offset_bottom = 360.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("8_st461")
+expand_mode = 1
+
+[node name="title_lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 40
+text = "#NAME_OF_HOUSE"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("9_3a7cd")
+expand_mode = 1
+
+[node name="price_lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 40
+text = "$000,000,000"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("9_fcv43")
+expand_mode = 1
+
+[node name="price_lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 40
+text = "$000,000,000"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel3/VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_3faf3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y7gw3")
+max_value = 365.0
+step = 1.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer10/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "XX  HORAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer7"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="tolive_btn" type="Button" parent="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("9_gii8k")
+theme_override_styles/hover_pressed = ExtResource("9_gii8k")
+theme_override_styles/hover = ExtResource("9_gii8k")
+theme_override_styles/pressed = ExtResource("9_gii8k")
+theme_override_styles/normal = ExtResource("9_gii8k")
+text = "to_live_for"
+icon = ExtResource("19_igt7t")
+
+[node name="torent_btn" type="Button" parent="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("21_c1l1l")
+theme_override_styles/hover_pressed = ExtResource("21_c1l1l")
+theme_override_styles/hover = ExtResource("21_c1l1l")
+theme_override_styles/pressed = ExtResource("21_c1l1l")
+theme_override_styles/normal = ExtResource("21_c1l1l")
+text = "$000,000"
+icon = ExtResource("19_igt7t")
+
+[node name="tosale_btn" type="Button" parent="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("21_c1l1l")
+theme_override_styles/hover_pressed = ExtResource("21_c1l1l")
+theme_override_styles/hover = ExtResource("21_c1l1l")
+theme_override_styles/pressed = ExtResource("21_c1l1l")
+theme_override_styles/normal = ExtResource("21_c1l1l")
+text = "to_sale_for"
+icon = ExtResource("19_igt7t")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="status_img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_bcp0j")
+
+[node name="peoplename_lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "Jhon Doe"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="cost_btn" type="Button" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("21_c1l1l")
+theme_override_styles/hover_pressed = ExtResource("21_c1l1l")
+theme_override_styles/hover = ExtResource("21_c1l1l")
+theme_override_styles/pressed = ExtResource("21_c1l1l")
+theme_override_styles/normal = ExtResource("21_c1l1l")
+text = "$000,000"
+icon = ExtResource("19_igt7t")
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_3faf3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y7gw3")
+show_percentage = false
+
+[node name="Label" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "XX  HORAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel3" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="kitchen" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/kitchen"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_upej5")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/kitchen"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="dinning" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/dinning"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("14_v2w4n")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/dinning"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="bedroom" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/bedroom"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("15_st461")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/bedroom"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="bath" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/bath"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("16_fcv43")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/bath"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="hall" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/hall"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("17_3a7cd")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/hall"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="garden" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/garden"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("27_q1bip")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/garden"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="parking" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/parking"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("28_r3wqo")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/parking"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="house" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/house"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("29_8yfbx")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer8/Panel3/HBoxContainer2/house"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "9,999 m2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel3" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer9"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="library" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/library"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("18_g2gm7")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/library"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="gym" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/gym"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("19_h58pd")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/gym"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="office" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/office"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("20_hjqed")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/office"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="spa" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/spa"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("21_rpkis")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/spa"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="gameroom" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/gameroom"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("22_a0fye")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/gameroom"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="tennis" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/tennis"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("23_fxffx")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/tennis"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="cinema" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/cinema"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("24_kyv51")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/cinema"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="laundry" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/laundry"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("25_choet")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/laundry"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="pool" type="VBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2"]
+layout_mode = 2
+
+[node name="img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/pool"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("26_tiipq")
+expand_mode = 1
+
+[node name="lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer9/Panel3/HBoxContainer2/pool"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "x9"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="Panel2" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="Panel3" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="Panel4" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer5/Panel"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer5/Panel/ScrollContainer"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/Panel3/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_2vwfl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel3/VBoxContainer/HBoxContainer6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="lvl_img" type="TextureRect" parent="Panel/Panel3/VBoxContainer/HBoxContainer6/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("20_gii8k")
+
+[node name="lvl_lbl" type="Label" parent="Panel/Panel3/VBoxContainer/HBoxContainer6/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+text = "Level: 9"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="upgrade_room_btn" type="Button" parent="Panel/Panel3/VBoxContainer/HBoxContainer6/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("9_gii8k")
+theme_override_styles/hover_pressed = ExtResource("9_gii8k")
+theme_override_styles/hover = ExtResource("9_gii8k")
+theme_override_styles/pressed = ExtResource("9_gii8k")
+theme_override_styles/normal = ExtResource("9_gii8k")
+text = "Upgrade: $000,000"
+icon = ExtResource("19_igt7t")
+
+[node name="action_btn" type="Button" parent="Panel/Panel3/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_la15b")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_wce0s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v056b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pl8kh")
+text = "see_details"
+
+[node name="details_btn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/hover_pressed = ExtResource("8_2vwfl")
+theme_override_styles/hover = ExtResource("8_2vwfl")
+theme_override_styles/pressed = ExtResource("8_2vwfl")
+theme_override_styles/normal = ExtResource("8_2vwfl")
+
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer/tolive_btn" to="." method="_on_tolive_btn_pressed"]
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer/torent_btn" to="." method="_on_torent_btn_pressed"]
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/HBoxContainer7/Panel/HBoxContainer/tosale_btn" to="." method="_on_tosale_btn_pressed"]
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/HBoxContainer3/Panel/HBoxContainer/cost_btn" to="." method="_on_cost_btn_pressed"]
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/HBoxContainer6/Panel/HBoxContainer/upgrade_room_btn" to="." method="_on_upgrade_room_btn_pressed"]
+[connection signal="pressed" from="Panel/Panel3/VBoxContainer/action_btn" to="." method="_on_action_btn_pressed"]
+[connection signal="pressed" from="Panel/details_btn" to="." method="_on_details_btn_pressed"]

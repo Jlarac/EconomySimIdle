@@ -1,0 +1,289 @@
+[gd_scene load_steps=12 format=3 uid="uid://borv5cr2jpfvd"]
+
+[ext_resource type="Script" uid="uid://dcjogxsy6xpyn" path="res://Scripts/Cards/card_interaction.gd" id="1_j6q84"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="2_wgrnh"]
+[ext_resource type="Texture2D" uid="uid://c0qrj1pgxsl6o" path="res://Assets/Images/Interactions/speak.png" id="3_jfvy8"]
+[ext_resource type="StyleBox" uid="uid://csdr42jgxpmxf" path="res://Resources/Themes/green_button.tres" id="4_uypli"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="5_fftk1"]
+[ext_resource type="StyleBox" uid="uid://dh134js2fuq74" path="res://Resources/Themes/yellow_button.tres" id="6_d1jfv"]
+[ext_resource type="Texture2D" uid="uid://bovf7f5kwsbmo" path="res://Assets/Images/Header/happy.png" id="7_uypli"]
+[ext_resource type="Texture2D" uid="uid://40rvenr1jh4h" path="res://Assets/Images/Relations/chemistry.png" id="8_d1jfv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1ygy"]
+bg_color = Color(0.490196, 0.658824, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u72lf"]
+bg_color = Color(0.0862745, 0.301961, 0.658824, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg5s6"]
+bg_color = Color(0, 0.713726, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(1000, 148)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -80.0
+offset_bottom = -2260.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_j6q84")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 148)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1ygy")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(0, 148)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="action_pnl" type="Panel" parent="Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_wgrnh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer2/action_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="action_icon" type="TextureRect" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_jfvy8")
+expand_mode = 1
+
+[node name="action_lbl" type="Label" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "speak_"
+vertical_alignment = 1
+
+[node name="action_btn" type="Button" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("4_uypli")
+theme_override_styles/hover_pressed = ExtResource("4_uypli")
+theme_override_styles/hover = ExtResource("4_uypli")
+theme_override_styles/pressed = ExtResource("4_uypli")
+theme_override_styles/normal = ExtResource("4_uypli")
+text = "accept_"
+
+[node name="action_progress" type="ProgressBar" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(250, 71)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_u72lf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yg5s6")
+show_percentage = false
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer/action_progress"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_fftk1")
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/HBoxContainer2/action_pnl"]
+visible = false
+layout_mode = 0
+offset_right = 700.0
+offset_bottom = 148.0
+alignment = 2
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("6_d1jfv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_uypli")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_fftk1")
+theme_override_font_sizes/font_size = 80
+text = "++"
+
+[node name="Panel2" type="Panel" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("6_d1jfv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel2/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("8_d1jfv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer2/action_pnl/HBoxContainer2/Panel2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_fftk1")
+theme_override_font_sizes/font_size = 80
+text = "++"
+
+[node name="check_pnl" type="Panel" parent="Panel/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_wgrnh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer2/check_pnl"]
+custom_minimum_size = Vector2(0, 148)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="action_icon" type="TextureRect" parent="Panel/HBoxContainer2/check_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_jfvy8")
+expand_mode = 1
+
+[node name="sure_txt" type="Label" parent="Panel/HBoxContainer2/check_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "sure?_"
+vertical_alignment = 1
+
+[node name="accept_btn" type="Button" parent="Panel/HBoxContainer2/check_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("4_uypli")
+theme_override_styles/hover_pressed = ExtResource("4_uypli")
+theme_override_styles/hover = ExtResource("4_uypli")
+theme_override_styles/pressed = ExtResource("4_uypli")
+theme_override_styles/normal = ExtResource("4_uypli")
+text = "accept_"
+
+[node name="cancel_btn" type="Button" parent="Panel/HBoxContainer2/check_pnl/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("6_d1jfv")
+theme_override_styles/hover_pressed = ExtResource("6_d1jfv")
+theme_override_styles/hover = ExtResource("6_d1jfv")
+theme_override_styles/pressed = ExtResource("6_d1jfv")
+theme_override_styles/normal = ExtResource("6_d1jfv")
+text = "cancel_"
+
+[connection signal="pressed" from="Panel/HBoxContainer2/action_pnl/HBoxContainer/action_btn" to="." method="_on_action_btn_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/check_pnl/HBoxContainer/accept_btn" to="." method="_on_accept_btn_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/check_pnl/HBoxContainer/cancel_btn" to="." method="_on_cancel_btn_pressed"]

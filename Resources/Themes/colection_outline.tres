@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bridrdgv5mq4e"]
+
+[ext_resource type="Shader" uid="uid://rtgbd8fxhmir" path="res://Resources/Shaders/outline.gdshader" id="1_fxbt2"]
+
+[resource]
+shader = ExtResource("1_fxbt2")
+shader_parameter/outline_width = 4.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)

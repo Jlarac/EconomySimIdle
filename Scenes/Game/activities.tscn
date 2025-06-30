@@ -1,0 +1,332 @@
+[gd_scene load_steps=15 format=3 uid="uid://cik2xc68jonxr"]
+
+[ext_resource type="Script" uid="uid://df6i1nhgephbq" path="res://Scripts/Game/activities.gd" id="1_nqcvt"]
+[ext_resource type="PackedScene" uid="uid://d1ejixc36j41k" path="res://Scenes/UI/header.tscn" id="2_g1aqh"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="4_niv0u"]
+[ext_resource type="Script" uid="uid://b0y3pwe67c2hl" path="res://addons/TextureRectRounded/TextureRectRounded.gd" id="5_1f2bl"]
+[ext_resource type="Texture2D" uid="uid://cgoufcjlvl2h3" path="res://Assets/Images/People/girl6.png" id="6_nqcvt"]
+[ext_resource type="Texture2D" uid="uid://c2vnymqrj4vqe" path="res://Assets/Images/Activities/house.png" id="7_g1aqh"]
+[ext_resource type="Texture2D" uid="uid://c3hdlcg5a6f5e" path="res://Assets/Images/Activities/park.png" id="8_hmw4a"]
+[ext_resource type="Texture2D" uid="uid://c4qprsqsc6opp" path="res://Assets/Images/Activities/events.png" id="9_niv0u"]
+[ext_resource type="Texture2D" uid="uid://b6nfiqclhj8ep" path="res://Assets/Images/Activities/trip.png" id="10_ue2ac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ail4k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kel1a"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpyy3"]
+corner_radius_top_left = 256
+corner_radius_top_right = 256
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 256
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ouy4"]
+bg_color = Color(0.505882, 0.47451, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bn18"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Activities" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nqcvt")
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.239216, 0.352941, 1)
+
+[node name="Body" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderUI" parent="Body" instance=ExtResource("2_g1aqh")]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+
+[node name="Activities" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Item_container" type="MarginContainer" parent="Body/Activities"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/Activities/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/Activities/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Menu" type="PanelContainer" parent="Body"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ail4k")
+
+[node name="Principal" type="HBoxContainer" parent="Body/Menu"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="home_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kel1a")
+
+[node name="user_photo" type="Panel" parent="Body/Menu/Principal/home_pnl"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpyy3")
+script = ExtResource("5_1f2bl")
+radius_bottom_left = 256
+radius_bottom_right = 256
+radius_top_left = 256
+radius_top_right = 256
+texture = ExtResource("6_nqcvt")
+
+[node name="home_btn" type="Button" parent="Body/Menu/Principal/home_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_niv0u")
+theme_override_styles/hover = ExtResource("4_niv0u")
+theme_override_styles/pressed = ExtResource("4_niv0u")
+theme_override_styles/normal = ExtResource("4_niv0u")
+
+[node name="park_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kel1a")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/park_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_hmw4a")
+expand_mode = 1
+
+[node name="park_btn" type="Button" parent="Body/Menu/Principal/park_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_niv0u")
+theme_override_styles/hover = ExtResource("4_niv0u")
+theme_override_styles/pressed = ExtResource("4_niv0u")
+theme_override_styles/normal = ExtResource("4_niv0u")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/park_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ouy4")
+
+[node name="house_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7bn18")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/house_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_g1aqh")
+expand_mode = 1
+
+[node name="house_btn" type="Button" parent="Body/Menu/Principal/house_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_niv0u")
+theme_override_styles/hover = ExtResource("4_niv0u")
+theme_override_styles/pressed = ExtResource("4_niv0u")
+theme_override_styles/normal = ExtResource("4_niv0u")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/house_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ouy4")
+
+[node name="events_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kel1a")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/events_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_niv0u")
+expand_mode = 1
+
+[node name="events_btn" type="Button" parent="Body/Menu/Principal/events_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_niv0u")
+theme_override_styles/hover = ExtResource("4_niv0u")
+theme_override_styles/pressed = ExtResource("4_niv0u")
+theme_override_styles/normal = ExtResource("4_niv0u")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/events_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ouy4")
+
+[node name="trip_pnl" type="Panel" parent="Body/Menu/Principal"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kel1a")
+
+[node name="TextureRect" type="TextureRect" parent="Body/Menu/Principal/trip_pnl"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_ue2ac")
+expand_mode = 1
+
+[node name="trip_btn" type="Button" parent="Body/Menu/Principal/trip_pnl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = ExtResource("4_niv0u")
+theme_override_styles/hover = ExtResource("4_niv0u")
+theme_override_styles/pressed = ExtResource("4_niv0u")
+theme_override_styles/normal = ExtResource("4_niv0u")
+
+[node name="selected_pnl" type="Panel" parent="Body/Menu/Principal/trip_pnl"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -10.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ouy4")
+
+[connection signal="pressed" from="Body/Menu/Principal/home_pnl/home_btn" to="." method="_on_home_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/park_pnl/park_btn" to="." method="_on_park_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/house_pnl/house_btn" to="." method="_on_house_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/events_pnl/events_btn" to="." method="_on_events_btn_pressed"]
+[connection signal="pressed" from="Body/Menu/Principal/trip_pnl/trip_btn" to="." method="_on_trip_btn_pressed"]

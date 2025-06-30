@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=3 uid="uid://jt6poug1eree"]
+
+[ext_resource type="Script" uid="uid://dxjwbxrfu8svm" path="res://Scripts/Cards/card_message.gd" id="1_w5o36"]
+[ext_resource type="StyleBox" uid="uid://vuf616qiejlb" path="res://Resources/Themes/card_theme.tres" id="2_mrj18"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="3_kirvw"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="6_3yxoh"]
+[ext_resource type="Texture2D" uid="uid://dneho5mt71ijy" path="res://Assets/Images/State_mind/happy.png" id="8_hc7m8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5o36"]
+bg_color = Color(0.154876, 0.154876, 0.154876, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -80.0
+offset_bottom = -2238.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_w5o36")
+
+[node name="Message" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1000.0
+offset_bottom = 170.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_mrj18")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Message"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Message/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("3_kirvw")
+
+[node name="state_mind_img" type="TextureRect" parent="Message/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_hc7m8")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Message/HBoxContainer"]
+custom_minimum_size = Vector2(5, 128)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("3_kirvw")
+
+[node name="Panel" type="Panel" parent="Message/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5o36")
+
+[node name="indicators_section" type="VBoxContainer" parent="Message/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+alignment = 1
+
+[node name="title_lbl" type="Label" parent="Message/HBoxContainer/indicators_section"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_3yxoh")
+theme_override_font_sizes/font_size = 40
+text = "Name Surname"
+vertical_alignment = 1
+
+[node name="body_lbl" type="Label" parent="Message/HBoxContainer/indicators_section"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_3yxoh")
+theme_override_font_sizes/font_size = 40
+text = "Name
+Surname"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Message"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/hover_pressed = ExtResource("3_kirvw")
+theme_override_styles/hover = ExtResource("3_kirvw")
+theme_override_styles/pressed = ExtResource("3_kirvw")
+theme_override_styles/normal = ExtResource("3_kirvw")
+
+[connection signal="pressed" from="Message/Button" to="." method="_on_button_pressed"]

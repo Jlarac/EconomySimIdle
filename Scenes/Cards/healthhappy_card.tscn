@@ -1,0 +1,331 @@
+[gd_scene load_steps=21 format=3 uid="uid://2kdl1pu1m40p"]
+
+[ext_resource type="Script" uid="uid://boms3ojxbgrjf" path="res://Scripts/Cards/card_healthhappy.gd" id="1_luxkw"]
+[ext_resource type="Texture2D" uid="uid://dybfnivvsdap2" path="res://Assets/Images/UI/img256.png" id="2_pjphx"]
+[ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="3_tqx53"]
+[ext_resource type="StyleBox" uid="uid://dv8fuupkk5kcf" path="res://Resources/Themes/money_lbl_card.tres" id="4_0swin"]
+[ext_resource type="StyleBox" uid="uid://chchvw58b4cgl" path="res://Resources/Themes/health_lbl_card.tres" id="5_ddn0p"]
+[ext_resource type="Texture2D" uid="uid://bbht1ddouvjr0" path="res://Assets/Images/UI/bill_64.png" id="5_e770f"]
+[ext_resource type="Texture2D" uid="uid://bpjcpo1v7yfve" path="res://Assets/Images/Menu/hearth_64.png" id="7_arkxi"]
+[ext_resource type="StyleBox" uid="uid://b30gj4j5g76yk" path="res://Resources/Themes/happy_lbl_card.tres" id="7_kwn1p"]
+[ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="8_bfu5v"]
+[ext_resource type="Shader" uid="uid://rtgbd8fxhmir" path="res://Resources/Shaders/outline.gdshader" id="9_4s0xc"]
+[ext_resource type="Texture2D" uid="uid://wwqe4v8ia8t4" path="res://Assets/Images/Menu/happy_64.png" id="10_ibnal"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcgks"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1ygy"]
+bg_color = Color(0.490196, 0.658824, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3hwfo"]
+shader = ExtResource("9_4s0xc")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kalxt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wce0s"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0, 0.8, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v056b"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.752941, 0.752941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl8kh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3faf3"]
+bg_color = Color(0.0862745, 0.301961, 0.658824, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7gw3"]
+bg_color = Color(0, 0.713726, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(1000, 330)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -80.0
+offset_bottom = -2078.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_luxkw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_qcgks")
+
+[node name="Subpanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1ygy")
+
+[node name="image" type="TextureRect" parent="Panel/Subpanel"]
+layout_mode = 1
+offset_left = 22.0
+offset_top = 50.0
+offset_right = 278.0
+offset_bottom = 306.0
+texture = ExtResource("2_pjphx")
+
+[node name="title_lbl" type="Label" parent="Panel/Subpanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 5.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 40
+text = "#NAME_OF_TODO"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Subpanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -75.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/Subpanel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_0swin")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Subpanel/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="bill_img" type="TextureRect" parent="Panel/Subpanel/HBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_e770f")
+
+[node name="cost_lbl" type="Label" parent="Panel/Subpanel/HBoxContainer/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 30
+text = "$000"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel/Subpanel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("5_ddn0p")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Subpanel/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="hearth_img" type="TextureRect" parent="Panel/Subpanel/HBoxContainer/Panel2/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_arkxi")
+
+[node name="health_lbl" type="Label" parent="Panel/Subpanel/HBoxContainer/Panel2/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("8_bfu5v")
+text = "-99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="health_img" type="TextureRect" parent="Panel/Subpanel/HBoxContainer/Panel2/HBoxContainer2"]
+material = SubResource("ShaderMaterial_3hwfo")
+layout_mode = 2
+size_flags_vertical = 4
+texture = SubResource("CompressedTexture2D_kalxt")
+
+[node name="Panel3" type="Panel" parent="Panel/Subpanel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("7_kwn1p")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Subpanel/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="smile_img" type="TextureRect" parent="Panel/Subpanel/HBoxContainer/Panel3/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("10_ibnal")
+
+[node name="happy_lbl" type="Label" parent="Panel/Subpanel/HBoxContainer/Panel3/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 30
+text = "-99%"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="action_btn" type="Button" parent="Panel/Subpanel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -650.0
+offset_top = -130.0
+offset_right = -150.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_wce0s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v056b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pl8kh")
+text = "#Button_todo"
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Subpanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -650.0
+offset_top = -130.0
+offset_right = -150.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_3faf3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y7gw3")
+show_percentage = false
+
+[node name="Label" type="Label" parent="Panel/Subpanel/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_tqx53")
+theme_override_font_sizes/font_size = 30
+text = "XX  HORAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Subpanel/action_btn" to="." method="_on_action_btn_pressed"]

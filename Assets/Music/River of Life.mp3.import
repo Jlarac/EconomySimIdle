@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfskjs6i1kjve"
+path="res://.godot/imported/River of Life.mp3-3b3ef5023bbfe8cd79de21c58c0cd609.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/River of Life.mp3"
+dest_files=["res://.godot/imported/River of Life.mp3-3b3ef5023bbfe8cd79de21c58c0cd609.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://booxleddsajh5"]
+
+[ext_resource type="Script" uid="uid://crlyubb5ouf5v" path="res://Scripts/Cards/card_separator.gd" id="1_dgceu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgjg6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(800, 20)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -280.0
+offset_bottom = -2388.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_dgceu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mgjg6")
