@@ -131,10 +131,13 @@ func update_skill():
 	var friend = skill_friend[$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/skills_friend_lst.get_selected_items()[0]]
 	var love = skill_love[$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/skills_love_lst.get_selected_items()[0]]
 	var learn = skill_learn[$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/skills_learn_lst.get_selected_items()[0]]
-	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/friend_lbl.text = tr('friend_skill') + ': ' + tr(friend) + ' ' + str(int(Data.Database.Personalities[friend]['Impact'] * 100)) + '%'
-	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/love_lbl.text = tr('love_skill') + ': ' + tr(love) + ' ' + str(int(Data.Database.Personalities[love]['Impact'] * 100)) + '%'
-	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/learn_lbl.text = tr('learn_skill') + ': ' + tr(learn) + ' ' + str(int(Data.Database.Personalities[learn]['Impact'] * 100)) + '%'
-
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/friend_lbl.text = tr('friend_skill') + ': ' + tr(friend)
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/love_lbl.text = tr('love_skill') + ': ' + tr(love)
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/learn_lbl.text = tr('learn_skill') + ': ' + tr(learn)
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/friend_desc_lbl.text = tr('meet_people_') + ': ' + str(int(Data.Database.Personalities[friend]['Impact'] * 100)) + '% ' 
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/love_desc_lbl.text = tr('growth_relationship_') + ': ' + str(int(Data.Database.Personalities[love]['Impact'] * 100)) + '% '
+	$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/learn_desc_lbl.text = tr('speed_learn_') + ': ' + str(int(Data.Database.Personalities[learn]['Impact'] * 100)) + '% '
+	
 func _on_save_profile_pressed() -> void:
 	Data.Game.Player.Name = name_selected
 	Data.Game.Player.Surname = surname_selected
@@ -149,7 +152,7 @@ func _on_save_profile_pressed() -> void:
 	Data.Game.Player.ProfilePic = name_portrait
 	Data.Game.Player.Birthdate = randi_range(946684800,978220800)
 	
-	Data.Game.Tutorial = $Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/HBoxContainer/CheckBox.button_pressed
+	Data.Game.Player.Tutorial = $Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/HBoxContainer/CheckBox.button_pressed
 	
 	Data.save_game()
 	Data.ban_names(Data.Game.Player.Name,Data.Game.Player.Surname)

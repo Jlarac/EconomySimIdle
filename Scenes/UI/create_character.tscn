@@ -948,7 +948,7 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Panel2" type="Panel" parent="Create/CreateCharacter/skill"]
-custom_minimum_size = Vector2(0, 1750)
+custom_minimum_size = Vector2(0, 2000)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_s073u")
 
@@ -982,6 +982,16 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_qlwkj")
+theme_override_font_sizes/font_size = 50
+text = "friend_skill"
+horizontal_alignment = 1
+
+[node name="friend_desc_lbl" type="Label" parent="Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("4_qlwkj")
 theme_override_font_sizes/font_size = 50
 text = "friend_skill"
@@ -1026,6 +1036,16 @@ theme_override_font_sizes/font_size = 50
 text = "love_skill"
 horizontal_alignment = 1
 
+[node name="love_desc_lbl" type="Label" parent="Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_qlwkj")
+theme_override_font_sizes/font_size = 50
+text = "love_skill"
+horizontal_alignment = 1
+
 [node name="skills_love_lst" type="ItemList" parent="Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
@@ -1058,6 +1078,16 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_qlwkj")
+theme_override_font_sizes/font_size = 50
+text = "learn_skill"
+horizontal_alignment = 1
+
+[node name="learn_desc_lbl" type="Label" parent="Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("4_qlwkj")
 theme_override_font_sizes/font_size = 50
 text = "learn_skill"

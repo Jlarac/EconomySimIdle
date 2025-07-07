@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 func update_screen():
 	for card in $Item_container/ScrollContainer/VBoxContainer.get_children():
 		card.queue_free()
-	for item in Data.Game.Messages:
+	for item in range(Data.Game.Messages.size(), 0, -1):
 		create_item(item)
 
 func create_item(item) -> void:

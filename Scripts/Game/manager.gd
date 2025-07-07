@@ -1,6 +1,5 @@
 extends Control
 
-#var time_init = 0
 var init_steps = 0
 var time_notification = 0
 var time_clic = 0
@@ -13,8 +12,8 @@ var path_house = ""
 
 var old_autoclic = 0
 var level_next_work = {0:0, 1: 10, 2: 50,3: 100, 4: 150, 5: 200,6: 250, 7: 300, 8: 350,9: 400, 10: 500}
-var screen = 'home'
-var old_screen = ''
+#var screen = 'home'
+var old_screen = 'home'
 
 
 var old_carefull_status = false
@@ -29,51 +28,126 @@ var current_message = -1
 var status_message = ''
 var time_message = 0
 
+var tutorial_steps = 0
+var time_tutorial = 0
+
+# Variables del Tutorial
+var tutorial_step_index: int = 0
+var tutorial_running: bool = false
+var tutorial_awaiting_input: bool = false
+
+var init_process = false
+var init_step = 0
+
 func _ready() -> void:
-	#get_tree().connect("tree_changed", self._on_tree_changed)
 	update_init()
-	#update_ui()
-	#update_screen()
-	
-	
 
 func _process(delta: float) -> void:
-	update_always(delta)
-	
-	
-	if old_carefull_status != Data.carefull_status and status_overlap:
-		await update_carefull()
-		old_carefull_status = Data.carefull_status
-	
-	if old_income_status != Data.income_status and status_overlap:
-		await update_income()
-		old_income_status = Data.income_status
-	
-	if old_screen != Data.screen:
-		update_screen()
-		old_screen = Data.screen
-
-func init_sequence(delta):
-	update_ui()
-	update_always(delta)
-	
-	#print(time_init)
-	#if time_init > 0.2:
-	if init_steps >= 2:
-		#$Background_dummy.hide()
-		run = true
-	init_steps += 1
+	if run:
+		if !Data.Game.Player.Tutorial:
+			update_always(delta)
+			
+			if old_carefull_status != Data.carefull_status and status_overlap:
+				await update_carefull()
+				old_carefull_status = Data.carefull_status
+			
+			if old_income_status != Data.income_status and status_overlap:
+				await update_income()
+				old_income_status = Data.income_status
+			
+			if old_screen != Data.screen:
+				print(old_screen , ' - ', Data.screen)
+				update_screen()
+				old_screen = Data.screen
+	if init_process:
+		init_step += 1
+		match init_step:
+			11:
+				$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.show()
+			22:
+				$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.show()
+			33:
+				$Body/Header/HBoxContainer2/date_pnl.show()
+			44:
+				$Body/Header/HBoxContainer2/card.show()
+			55:
+				$Body/CenterBody/Home/user_data/card/Player_data.show()
+			66:
+				$Body/CenterBody/Home/user_data/card/user_photo.show()
+			77:
+				$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl/TextureRect.show()
+			88:
+				$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl/Label.show()
+			99:
+				$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2/ProgressBar.show()
+			100:
+				$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3/Label.show()
+			110:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.show()
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/study_pic.show()
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_btn.show()
+			120:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_prgbr.show()
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_btn.show()
+			130:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_prgbr.show()
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_btn.show()
+			140:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl/Shop_btn.show()
+			150:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl/To_do_btn.show()
+			160:
+				$Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl/Achievements_btn.show()
+			170:
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/Friend_btn.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.show()
+			180:
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/House_btn.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.show()
+			190:
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/house_photo.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/Car_btn.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/car_lbl.show()
+			200:
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/house_photo.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/Collection_btn.show()
+				$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/collection_lbl.show()
+				
+			210:
+				$Body/Menu/Menu_container/Principal/Realshop_pnl.show()
+			220:
+				$Body/Menu/Menu_container/Principal/email_pnl.show()
+			230:
+				$Body/Menu/Menu_container/Principal/Clock.show()
+			240:
+				$Body/Menu/Menu_container/Principal/Multiplayer_pnl.show()
+			250:
+				$Body/Menu/Menu_container/Principal/Settings_pnl.show()
+			260:
+				init_process = false
+				run = true
 
 func update_init():
+	hide_buttons_tutorial()
+	hide_background_tutorial()
+	
 	$Carefull.hide()
 	$Income.hide()
+	$Tutorial.hide()
 	$Transicion.show()
 	$AnimationPlayer.play('transition_out')
 	await $AnimationPlayer.animation_finished
 	$Transicion.hide()
+	
+	
+	if Data.Game.Player.Tutorial:
+		start_tutorial()
+	else:
+		start_init()
 
 func update_screen():
-	#if Data.screen not in ['house_market','house_own']:
 	$AudioStreamPlayer.play()
 	
 	$Transicion_screen.show()
@@ -106,38 +180,308 @@ func update_screen():
 	$AnimationPlayer.play('transition_screen_out')
 	await $AnimationPlayer.animation_finished
 	$Transicion_screen.hide()
+
+func start_tutorial():
+	if tutorial_running: return
+	tutorial_running = true
+	tutorial_step_index = 0
+	print("DEBUG: Tutorial Iniciado!")
+	await get_tree().process_frame
+	next_tutorial_step()
+
+func start_init():
+	#await get_tree().process_frame
+	show_background_tutorial()
+	
+	$AnimationPlayer.play('init_in')
+	await $AnimationPlayer.animation_finished
+			
+	init_step = 0
+	init_process = true
+	
+	#next_init_step()
+	
+func wait_func():
+	$AnimationPlayer.play("time_await")
+	await $AnimationPlayer.animation_finished
+
+func hide_buttons_tutorial():
+	
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.hide()
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.hide()
+	
+	$Body/Header/HBoxContainer2/date_pnl.hide()
+	
+	$Body/Header/HBoxContainer2/card.hide()
+	
+	
+	
+	$Body/CenterBody/Home/user_data/card/Player_data.hide()
+	$Body/CenterBody/Home/user_data/card/user_photo.hide()
+	
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl/TextureRect.hide()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl/Label.hide()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2/ProgressBar.hide()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3/Label.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.hide()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/study_pic.hide()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_btn.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_prgbr.hide()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_btn.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_prgbr.hide()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_btn.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl/Shop_btn.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl/To_do_btn.hide()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl/Achievements_btn.hide()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/Friend_btn.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.hide()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/House_btn.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.hide()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/house_photo.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/Car_btn.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/car_lbl.hide()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/house_photo.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/Collection_btn.hide()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/collection_lbl.hide()
+	
+	
+	$Body/Menu/Menu_container/Principal/Realshop_pnl.hide()
+	$Body/Menu/Menu_container/Principal/email_pnl.hide()
+	$Body/Menu/Menu_container/Principal/Clock.hide()
+	$Body/Menu/Menu_container/Principal/Multiplayer_pnl.hide()
+	$Body/Menu/Menu_container/Principal/Settings_pnl.hide()
+
+func hide_background_tutorial():
+	$Body/Header.hide()
+	
+	$Body/CenterBody/Home/user_data/card/Panel.hide()
+	
+	$Body/CenterBody/Home/progress_steps/card.hide()
+	
+	$Body/CenterBody/Home/submenu/card.hide()
+	
+	$Body/CenterBody/Home/own_card_container/card.hide()
+	
+	$Body/Menu/Panel2.hide()
+	
+func show_background_tutorial():
+	$Body/Header.show()
+	
+	$Body/CenterBody/Home/user_data/card/Panel.show()
+	
+	$Body/CenterBody/Home/progress_steps/card.show()
+	
+	$Body/CenterBody/Home/submenu/card.show()
+	
+	$Body/CenterBody/Home/own_card_container/card.show()
+	
+	$Body/Menu/Panel2.show()
+
+func update_tutorial():
+	#hide_buttons_tutorial()
+	#hide_background_tutorial()
+	
+	
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
+	
+	
+	$Tutorial.position = Vector2(40,1000)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('addon_installing_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/init.show()
+	await wait_func()
+	
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
+	
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.show()
+	$Tutorial.position = Vector2(40,300)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('health_desc_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/health.show()
+	await wait_func()
+	
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
 		
-func update_ui() -> void:
-	pass
-	'''$Body/CenterBody/Home/user_data/card/user_photo.texture = load(Data.Database.Photos[Data.Game.Player.ProfilePic]['Path'])
-	$Body/Menu/Menu_container/Principal/Realshop_pnl/user_photo.texture = load(Data.Database.Photos[Data.Game.Player.ProfilePic]['Path'])
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.show()
+	$Tutorial.position = Vector2(40,300)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('happy_desc_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/happy.show()
+	await wait_func()
 	
-	$Body/CenterBody/Home/user_data/card/Player_data/Name_section/name_lbl.text = Data.Game.Player.Name + " " + Data.Game.Player.Surname
-	$Body/CenterBody/Home/user_data/card/Player_data/Work_section/work_lbl.text = Data.Game.Player.Work
-	$Body/CenterBody/Home/user_data/card/Player_data/Year_section/age_lbl.text = str(Data.Game.Player.YearsOld) + " " + tr("years_")
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
+		
+	$Body/Header/HBoxContainer2/date_pnl.show()
+	$Tutorial.position = Vector2(40,300)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('date_desc_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/date.show()
+	await wait_func()
 	
-	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.value = Data.Game.Player.ProgressStudy
-	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/study_pic.texture = load(Data.Game.Player.StudyIcon)
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
+		
+		
+	$Body/Header/HBoxContainer2/card.show()
+	$Tutorial.position = Vector2(40,300)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('card_desc_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/card.show()
+	await wait_func()
 	
-	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.texture = load('res://Assets/Images/People/no_friends.png')
-	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.text = 'no_friends_'
-	var high_value = 0
-	for friend in Data.Game.Player.Friends:
-		if Data.Game.Player.Friends[friend]['Friend'] >= high_value and Data.Game.Player.Friends[friend]['Friend'] > 100:
-			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.texture = load(Data.Database.Photos[Data.Game.People[friend].ProfilePic]['Path'])
-			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.text = Data.Game.People[friend].Fullname
-			high_value = Data.Game.Player.Friends[friend]['Friend']
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
 	
-	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.texture = load("res://Assets/Images/Houses/park1024.png")
-	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.text = "no_house"
-	for house in Data.Game.Player.Houses:
-		if Data.Game.Player.Houses[house]["CurrentHome"] == 1:
-			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.texture = load(Data.Game.Player.Houses[house]["Path"])
-			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.text = Data.Game.Player.Houses[house]["Name"]
-	'''
+	$Body/CenterBody/Home/user_data/card/Player_data.show()
+	$Body/CenterBody/Home/user_data/card/user_photo.show()
+	$Tutorial.position = Vector2(40,1200)
+	$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('user_desc_')
+	$Tutorial/VBoxContainer/MarginContainer2/Panel/user.show()
+	await wait_func()
 	
-	#$Body/Menu/Menu_container/Principal/Clock/Clock_btn.text = "+" + str(int(Data.Game.AutomaticHours)) + "h"
+func next_tutorial_step():
+	if not tutorial_running: return
 	
+	tutorial_step_index += 1
+	print("DEBUG: Avanzando al Paso de Tutorial: " , tutorial_step_index)
+	
+	for i in $Tutorial/VBoxContainer/MarginContainer2/Panel.get_children():
+		i.hide()
+		
+	match tutorial_step_index:
+		1:
+			show_background_tutorial()
+			$Tutorial.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('addon_installing_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/init.show()
+			$AnimationPlayer.play('tutorial_in')
+			await $AnimationPlayer.animation_finished
+			next_tutorial_step()
+		2:
+			$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('health_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/health.show()
+			$AnimationPlayer.play('health_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,300)
+			await wait_func()
+			next_tutorial_step()
+		3:
+			$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('happy_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/happy.show()
+			$Tutorial.position = Vector2(40,300)
+			await wait_func()
+			next_tutorial_step()
+		4:
+			$Body/Header/HBoxContainer2/date_pnl.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('date_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/date.show()
+			$Tutorial.position = Vector2(40,300)
+			await wait_func()
+			next_tutorial_step()
+		5:
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('card_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/card.show()
+			$Body/Header/HBoxContainer2/card.show()
+			$Tutorial.position = Vector2(40,300)
+			await wait_func()
+			next_tutorial_step()
+		6:
+			$Body/CenterBody/Home/user_data/card/Player_data.show()
+			$Body/CenterBody/Home/user_data/card/user_photo.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('user_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/user.show()
+			$AnimationPlayer.play('user_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,800)
+			await wait_func()
+			next_tutorial_step()
+		7:
+			$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl/TextureRect.show()
+			$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl/Label.show()
+			$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2/ProgressBar.show()
+			$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3/Label.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('progress_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/progress.show()
+			$AnimationPlayer.play('progress_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,1000)
+			await wait_func()
+			next_tutorial_step()
+		8:
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/study_pic.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_btn.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_prgbr.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_btn.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_prgbr.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_btn.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl/Shop_btn.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl/To_do_btn.show()
+			$Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl/Achievements_btn.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('submenu_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/submenu.show()
+			$AnimationPlayer.play('submenu_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,1200)
+			await wait_func()
+			next_tutorial_step()
+		9:
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/Friend_btn.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/House_btn.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/house_photo.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/Car_btn.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/car_lbl.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/house_photo.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/Collection_btn.show()
+			$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/collection_lbl.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('own_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/own.show()
+			$AnimationPlayer.play('own_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,1700)
+			await wait_func()
+			next_tutorial_step()
+		
+		10:
+			$Body/Menu/Menu_container/Principal/Realshop_pnl.show()
+			$Body/Menu/Menu_container/Principal/email_pnl.show()
+			$Body/Menu/Menu_container/Principal/Clock.show()
+			$Body/Menu/Menu_container/Principal/Multiplayer_pnl.show()
+			$Body/Menu/Menu_container/Principal/Settings_pnl.show()
+			$Tutorial/VBoxContainer/MarginContainer/Panel/HBoxContainer2/title_lbl.text = tr('menu_desc_')
+			$Tutorial/VBoxContainer/MarginContainer2/Panel/menu.show()
+			$AnimationPlayer.play('menu_in')
+			await $AnimationPlayer.animation_finished
+			$Tutorial.position = Vector2(40,1900)
+			await wait_func()
+			next_tutorial_step()
+		11:
+			print("DEBUG: Tutorial Finalizado!")
+			$Tutorial.hide() # Oculta el panel de tutorial
+			Data.Game.Player.Tutorial = false # Desactiva el modo tutorial
+			run = true
+	
+
+func hide_all_game_elements_for_tutorial():
+	#hide_background_tutorial()
+	hide_buttons_tutorial()
 
 func update_carefull(overlap = true):
 	if overlap:
@@ -186,7 +530,7 @@ func update_always(delta) -> void:
 		$Message/HBoxContainer/indicators_section/title_lbl.text = tr(Data.Game.Messages[current_message]['area'])
 		$Message/HBoxContainer/indicators_section/body_lbl.text = tr(Data.Game.Messages[current_message]['message']) + ': \n     ' + tr(Data.Game.Messages[current_message]['item'])
 		$Message/ProgressBar.value = 0
-		$AnimationPlayer.play('message_in')
+		$MessagePlayer.play('message_in')
 		time_message = 0
 		status_message = 'wait_init'
 	if status_message == 'wait_init':
@@ -202,7 +546,7 @@ func update_always(delta) -> void:
 		else:
 			$Message/ProgressBar.value = ((time_message / 5) * 100)
 	if status_message == 'out':
-		$AnimationPlayer.play('message_out')
+		$MessagePlayer.play('message_out')
 		time_message = 0
 		status_message = 'wait_out'
 	if status_message == 'wait_out':
@@ -216,23 +560,6 @@ func update_always(delta) -> void:
 		#if Data.screen == 'market_houses' or Data.screen == 'own_houses':
 		#	update_screen()
 		old_day = Data.dictdate['day']
-		
-	pass
-	'''$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.value = Data.Game.Player.ProgressStudy
-	var learn_progress = 0
-	if Data.Database.Work[Data.Game.Player.Work]['Level'] == 10:
-		learn_progress = int((Data.Game.Player.Skills[Data.Database.Study[Data.Database.Work[Data.Game.Player.Work]['Parent']]['Skill']] / 500)*100)
-	else:
-		learn_progress = int((Data.Game.Player.Skills[Data.Database.Study[Data.Database.Work[Data.Game.Player.Work]['Parent']]['Skill']] / level_next_work[Data.Database.Work[Data.Game.Player.Work]['Level'] + 1])*100)
-	if learn_progress >= 100 or Data.Database.Work[Data.Game.Player.Work]['Level'] == 0:
-		learn_progress = 0
-	$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_prgbr.value = learn_progress
-	
-	time_notification += delta
-	notification_icon()
-	
-	
-	 '''
 	
 	
 func load_data():
@@ -267,7 +594,7 @@ func _on_clock_btn_pressed() -> void:
 
 
 func _on_study_btn_pressed() -> void:
-	screen = 'study'
+	#screen = 'study'
 	update_screen()
 
 
@@ -296,7 +623,7 @@ func _on_friend_btn_pressed() -> void:
 
 func _on_house_own_btn_pressed() -> void:
 	#get_tree().change_scene_to_file('res://Scenes/Game/houses.tscn')
-	screen = 'houses_dashboard'
+	#screen = 'houses_dashboard'
 	update_screen()
 	
 func _on_car_btn_pressed() -> void:
@@ -304,3 +631,9 @@ func _on_car_btn_pressed() -> void:
 
 func _on_collection_btn_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	print('La animación ' + anim_name + ' ha terminado.')
+	if anim_name == 'tutorial_in':
+		tutorial_steps += 1

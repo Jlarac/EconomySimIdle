@@ -2,12 +2,10 @@ extends Control
 
 var time = 0
 var run = false
-var target = 2
+var target = 1
 
 func _ready() -> void:
 	pass
-	#await get_tree().create_timer(2).timeout
-	#run = true
 
 func _process(delta: float) -> void:
 	time += delta

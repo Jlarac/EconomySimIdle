@@ -49,7 +49,7 @@ class_name PlayerData
 @export var SickArray: Array[String] = []
 
 @export var Work: String = 'no_work'
-@export var WorkAvailable: Array = []
+@export var WorkAvailable: Array = ['no_work']
 @export var WorkSummary: Dictionary = {'no_work': 0}
 
 @export var Study: String = ''
@@ -140,7 +140,6 @@ func change_workprogress():
 		if work == Work:
 			WorkSummary[work] += 1
 			Skills[Data.Database.Study[Data.Database.Work[work]['Parent']]['Skill']] += (1 * SkillLearn)
-	print(WorkAvailable)
 
 func change_studyprogress():
 	HappyDict['study'] = 0
@@ -160,12 +159,32 @@ func change_studyprogress():
 			Skills[skill] = 500
 
 func set_work_available():
-	var level_next_work = {0:0, 1: 10, 2: 50,3: 100, 4: 150, 5: 200,6: 250, 7: 300, 8: 350,9: 400, 10: 500}
+	var level_next_work = {0: 0, 1: 10, 2: 50,3: 100, 4: 150, 5: 200,6: 250, 7: 300, 8: 350,9: 400, 10: 500}
+	
 	for work in Data.Database.Work:
-		if Skills[Data.Database.Study[Data.Database.Work[work]['Parent']]['Skill']] >= level_next_work[Data.Database.Work[work]['Level']]:
-			if work not in WorkAvailable:
-				WorkAvailable.append(work)
-				Data.Game.create_message('work',work)
+		if work != 'no_work':
+			
+			if Skills[Data.Database.Study[Data.Database.Work[work]['Parent']]['Skill']] >= level_next_work[Data.Database.Work[work]['Level']] and Data.Database.Work[work]['Level'] == 1:
+				if work not in WorkAvailable:
+					WorkAvailable.append(work)
+					Data.Game.create_message('work',work)
+			
+			if Data.Database.Work[work]['Parent'] == Data.Database.Work[work]['Parent'] and Data.Database.Work[work]['Level'] == Data.Database.Work[work]['Level'] + 1:
+				pass
+				#var next_work = job
+					
+					
+	'''for work in WorkSummary:
+		
+			for job in Data.Database.Work:
+				
+					
+					if Skills[Data.Database.Study[Data.Database.Work[work]['Parent']]['Skill']] >= level_next_work[Data.Database.Work[work]['Level']]:
+						if work not in WorkAvailable:
+							WorkAvailable.append(work)
+							Data.Game.create_message('work',work)
+					print(work, '  ->  ',job) '''
+		
 	print('WorkAvailable:    ',WorkAvailable)
 
 func set_worksalary():

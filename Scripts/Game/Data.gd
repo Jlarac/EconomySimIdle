@@ -106,7 +106,7 @@ const GameSavePath := 'user://Savefiles/GameSaveGame.tres'
 var carefull_status = false
 var income_status = false
 
-
+var Tutorial = true
 
 		
 func _ready():
@@ -256,7 +256,7 @@ func clic_auto():
 
 func clic_manual():
 	Game.Player.ManualClic += 1
-	Game.Date += (3600 * Game.AutomaticHours * 24)
+	Game.Date += ( 3600 * Game.AutomaticHours ) #* 24
 	clic_action()
 	
 func clic_action():
