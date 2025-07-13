@@ -59,10 +59,12 @@ func _process(delta: float) -> void:
 				print(old_screen , ' - ', Data.screen)
 				update_screen()
 				old_screen = Data.screen
-	if init_process:
+	'''if init_process:
 		init_step += 1
 		match init_step:
-			11:
+			11: 
+				show_buttons_tutorial()
+				
 				$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.show()
 			22:
 				$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.show()
@@ -124,14 +126,15 @@ func _process(delta: float) -> void:
 			240:
 				$Body/Menu/Menu_container/Principal/Multiplayer_pnl.show()
 			250:
-				$Body/Menu/Menu_container/Principal/Settings_pnl.show()
+				$Body/Menu/Menu_container/Principal/Settings_pnl.show() 
 			260:
 				init_process = false
-				run = true
+				run = true '''
 
 func update_init():
-	hide_buttons_tutorial()
-	hide_background_tutorial()
+	if Data.Game.Player.Tutorial:
+		hide_buttons_tutorial()
+		hide_background_tutorial()
 	
 	$Carefull.hide()
 	$Income.hide()
@@ -141,11 +144,12 @@ func update_init():
 	await $AnimationPlayer.animation_finished
 	$Transicion.hide()
 	
-	
 	if Data.Game.Player.Tutorial:
 		start_tutorial()
 	else:
 		start_init()
+	
+	
 
 func update_screen():
 	$AudioStreamPlayer.play()
@@ -172,6 +176,8 @@ func update_screen():
 		$Body/CenterBody/Houses/House.show()
 	if Data.screen == 'business_dashboard':
 		$Body/CenterBody/BusinessDashboard.show()
+	if Data.screen == 'shop_dashboard':
+		$Body/CenterBody/ShopDashboard.show()
 	if Data.screen == 'work':
 		$Body/CenterBody/Work.show()
 	if Data.screen == 'message':
@@ -192,12 +198,13 @@ func start_tutorial():
 func start_init():
 	#await get_tree().process_frame
 	show_background_tutorial()
-	
-	$AnimationPlayer.play('init_in')
-	await $AnimationPlayer.animation_finished
+	show_buttons_tutorial()
+	run = true
+	#$AnimationPlayer.play('init_in')
+	#await $AnimationPlayer.animation_finished
 			
-	init_step = 0
-	init_process = true
+	#init_step = 0
+	#init_process = true
 	
 	#next_init_step()
 	
@@ -263,6 +270,64 @@ func hide_buttons_tutorial():
 	$Body/Menu/Menu_container/Principal/Multiplayer_pnl.hide()
 	$Body/Menu/Menu_container/Principal/Settings_pnl.hide()
 
+func show_buttons_tutorial():
+	
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel.show()
+	$Body/Header/HBoxContainer2/HBoxContainer/VBoxContainer2/Panel2.show()
+	
+	$Body/Header/HBoxContainer2/date_pnl.show()
+	
+	$Body/Header/HBoxContainer2/card.show()
+	
+	
+	
+	$Body/CenterBody/Home/user_data/card/Player_data.show()
+	$Body/CenterBody/Home/user_data/card/user_photo.show()
+	
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl/TextureRect.show()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl/Label.show()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2/ProgressBar.show()
+	$Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3/Label.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_prgbr.show()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/study_pic.show()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_btn.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_prgbr.show()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_btn.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_prgbr.show()
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl/Bank_btn.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl/Shop_btn.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl/To_do_btn.show()
+	
+	$Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl/Achievements_btn.show()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_photo.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/Friend_btn.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/Friend_pnl/friend_lbl.show()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_photo.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/House_btn.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/house_lbl.show()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/house_photo.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/Car_btn.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Study_pnl/car_lbl.show()
+	
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/house_photo.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/Collection_btn.show()
+	$Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer2/Work_pnl/collection_lbl.show()
+	
+	
+	$Body/Menu/Menu_container/Principal/Realshop_pnl.show()
+	$Body/Menu/Menu_container/Principal/email_pnl.show()
+	$Body/Menu/Menu_container/Principal/Clock.show()
+	$Body/Menu/Menu_container/Principal/Multiplayer_pnl.show()
+	$Body/Menu/Menu_container/Principal/Settings_pnl.show()
+	
 func hide_background_tutorial():
 	$Body/Header.hide()
 	
@@ -609,7 +674,9 @@ func _on_shop_btn_pressed() -> void:
 	get_tree().change_scene_to_file('res://Scenes/Game/shop.tscn')
 	
 func _on_upgrades_btn_pressed() -> void:
-	get_tree().change_scene_to_file('res://Scenes/Game/shop.tscn')
+	pass
+	#get_tree().change_scene_to_file('res://Scenes/Game/shop.tscn')
+	#Data.screen = 'shop_dashboard'
 
 
 func _on_to_do_btn_pressed() -> void:
@@ -634,6 +701,14 @@ func _on_collection_btn_pressed() -> void:
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	print('La animación ' + anim_name + ' ha terminado.')
+	#print('La animación ' + anim_name + ' ha terminado.')
 	if anim_name == 'tutorial_in':
 		tutorial_steps += 1
+
+
+func _on_message_btn_pressed() -> void:
+	if current_message != -1:
+		if Data.Game.Messages[current_message]['area'] == 'grezul_university_':
+			Data.screen = 'study'
+		elif Data.Game.Messages[current_message]['area'] == 'linkin_':
+			Data.screen = 'work'

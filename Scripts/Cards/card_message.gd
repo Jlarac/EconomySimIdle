@@ -21,3 +21,8 @@ func _process(_delta: float) -> void:
 func _on_button_pressed() -> void:
 	if Data.Game.Messages[Id]['status'] == true:
 		Data.Game.Messages[Id]['status'] = false
+		
+		if Data.Game.Messages[Id]['area'] == 'grezul_university_':
+			Data.screen = 'study'
+		elif Data.Game.Messages[Id]['area'] == 'linkin_':
+			Data.screen = 'work'

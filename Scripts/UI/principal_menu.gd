@@ -48,7 +48,7 @@ func _on_coin_removed():
 	#print("Monedas activas:", active_coins)
 
 func _on_home_btn_pressed() -> void:
-	if Data.screen in ['study','houses_dashboard','business_dashboard','message']:
+	if Data.screen in ['study','houses_dashboard','business_dashboard','message','shop_dashboard']:
 		Data.screen = 'home'
 	if Data.screen in ['market_houses','own_houses']:
 		Data.screen = 'houses_dashboard'

@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=3 uid="uid://k067sr1vra5j"]
+[gd_scene load_steps=203 format=3 uid="uid://k067sr1vra5j"]
 
 [ext_resource type="Script" uid="uid://b5jo0qosh02ks" path="res://Scripts/Game/manager.gd" id="1_8dwht"]
 [ext_resource type="Script" uid="uid://by65j0uxgof6h" path="res://Scripts/Game/home.gd" id="1_lm1ig"]
@@ -100,8 +100,16 @@
 [ext_resource type="StyleBox" uid="uid://dh134js2fuq74" path="res://Resources/Themes/yellow_button.tres" id="66_a0xym"]
 [ext_resource type="Script" uid="uid://c1djveejym572" path="res://Scripts/Game/business_dashboard.gd" id="71_30u8p"]
 [ext_resource type="PackedScene" uid="uid://bsoqum3yxyqxg" path="res://Scenes/Cards/work_card.tscn" id="72_ob78p"]
+[ext_resource type="Script" uid="uid://des4066s2srxj" path="res://Scripts/Game/shop_dashboard.gd" id="74_a18jp"]
+[ext_resource type="StyleBox" uid="uid://byyl6i7jhjgb0" path="res://Resources/Themes/selected_enviroment_round_20.tres" id="76_cgkq7"]
+[ext_resource type="Texture2D" uid="uid://co6nf1jqu5tiq" path="res://Assets/Images/Upgrades/cloth3.png" id="77_40vpa"]
+[ext_resource type="Texture2D" uid="uid://irehqn2135wn" path="res://Assets/Images/Upgrades/food.png" id="78_symoh"]
 [ext_resource type="Texture2D" uid="uid://8knf1llso72t" path="res://Assets/Images/Menu/settings.png" id="79_1dwqq"]
+[ext_resource type="Texture2D" uid="uid://d0jabgtlr280p" path="res://Assets/Images/Upgrades/medicine.png" id="79_dwt0w"]
 [ext_resource type="AudioStream" uid="uid://cn1xe0dhqab4t" path="res://Assets/Sounds/ui.mp3" id="80_30u8p"]
+[ext_resource type="Texture2D" uid="uid://s170l1siku37" path="res://Assets/Images/Upgrades/furniture.png" id="80_j507v"]
+[ext_resource type="Texture2D" uid="uid://dmr6d2dbkncc0" path="res://Assets/Images/Upgrades/clock.png" id="81_7y6ma"]
+[ext_resource type="Texture2D" uid="uid://bjrtqaoumakyd" path="res://Assets/Images/Upgrades/real.png" id="82_ntbh1"]
 [ext_resource type="AudioStream" uid="uid://dyhiv06vqauy3" path="res://Assets/Sounds/clicker.mp3" id="82_ntdva"]
 [ext_resource type="Texture2D" uid="uid://ivsmn0xre28o" path="res://Assets/Images/Header/fun.png" id="95_a0xym"]
 [ext_resource type="Texture2D" uid="uid://ck5illebffsy1" path="res://Assets/Images/Study/speciality.png" id="97_yly7k"]
@@ -230,7 +238,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wipo6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm8jg"]
 corner_radius_top_left = 256
 corner_radius_top_right = 256
 corner_radius_bottom_right = 256
@@ -251,7 +259,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a18jp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nul8m"]
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -263,28 +271,28 @@ bg_color = Color(0, 0, 0, 0.427451)
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ght56"]
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm8jg"]
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nul8m"]
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing = false
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm6l6"]
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7deat"]
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4igdw"]
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji3v4"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -327,7 +335,7 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7deat"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgkq7"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -346,7 +354,7 @@ corner_radius_top_right = 128
 corner_radius_bottom_right = 128
 corner_radius_bottom_left = 128
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4igdw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40vpa"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -359,7 +367,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4uwn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji3v4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwt0w"]
 corner_radius_top_left = 256
 corner_radius_top_right = 256
 corner_radius_bottom_right = 256
@@ -594,6 +602,21 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
 }
 
+[sub_resource type="Animation" id="Animation_wipo6"]
+resource_name = "health_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 1000), Vector2(40, 300)]
+}
+
 [sub_resource type="Animation" id="Animation_0od3q"]
 resource_name = "income_in"
 length = 0.3
@@ -650,6 +673,193 @@ tracks/1/keys = {
 "values": [Vector2(40, 230), Vector2(1040, 230)]
 }
 
+[sub_resource type="Animation" id="Animation_7deat"]
+resource_name = "init_in"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Header:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/CenterBody/Home/user_data/card/Panel:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body/CenterBody/Home/own_card_container/card:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Body/Menu/Panel2:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wm6l6"]
+resource_name = "menu_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 1700), Vector2(40, 1900)]
+}
+
 [sub_resource type="Animation" id="Animation_2stmt"]
 resource_name = "message_in"
 tracks/0/type = "value"
@@ -679,6 +889,55 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(40, 205), Vector2(1100, 205)]
 }
+
+[sub_resource type="Animation" id="Animation_nul8m"]
+resource_name = "own_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 1200), Vector2(40, 1700)]
+}
+
+[sub_resource type="Animation" id="Animation_ght56"]
+resource_name = "progress_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 800), Vector2(40, 1000)]
+}
+
+[sub_resource type="Animation" id="Animation_gm8jg"]
+resource_name = "submenu_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, 1000), Vector2(40, 1200)]
+}
+
+[sub_resource type="Animation" id="Animation_ntdva"]
+resource_name = "time_await"
+length = 3.0
 
 [sub_resource type="Animation" id="Animation_gnksj"]
 resource_name = "transition_in"
@@ -1000,25 +1259,6 @@ tracks/20/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ntdva"]
-resource_name = "time_await"
-length = 3.0
-
-[sub_resource type="Animation" id="Animation_wipo6"]
-resource_name = "health_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(40, 1000), Vector2(40, 300)]
-}
-
 [sub_resource type="Animation" id="Animation_a18jp"]
 resource_name = "user_in"
 tracks/0/type = "value"
@@ -1032,238 +1272,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(40, 300), Vector2(40, 800)]
-}
-
-[sub_resource type="Animation" id="Animation_ght56"]
-resource_name = "progress_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(40, 800), Vector2(40, 1000)]
-}
-
-[sub_resource type="Animation" id="Animation_gm8jg"]
-resource_name = "submenu_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(40, 1000), Vector2(40, 1200)]
-}
-
-[sub_resource type="Animation" id="Animation_nul8m"]
-resource_name = "own_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(40, 1200), Vector2(40, 1700)]
-}
-
-[sub_resource type="Animation" id="Animation_wm6l6"]
-resource_name = "menu_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(40, 1700), Vector2(40, 1900)]
-}
-
-[sub_resource type="Animation" id="Animation_7deat"]
-resource_name = "init_in"
-length = 3.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Body/Header:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Body/CenterBody/Home/user_data/card/Panel:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Img_pnl:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl2:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Body/CenterBody/Home/progress_steps/card/HBoxContainer/Txt_pnl3:self_modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl:self_modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl:self_modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Bank_pnl:self_modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl:self_modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/To_do_pnl:self_modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Body/CenterBody/Home/submenu/card/HBoxContainer/Achievements_pnl:self_modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("Body/CenterBody/Home/own_card_container/card:self_modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(2, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Body/Menu/Panel2:self_modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(2.5, 3.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i232g"]
@@ -1889,7 +1897,7 @@ offset_left = -550.0
 offset_right = -38.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wipo6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_gm8jg")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 256
 radius_bottom_right = 256
@@ -1922,7 +1930,6 @@ theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Img_pnl" type="Panel" parent="Body/CenterBody/Home/progress_steps/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(74, 74)
 layout_mode = 2
 size_flags_vertical = 4
@@ -1946,7 +1953,6 @@ texture = ExtResource("12_gnksj")
 expand_mode = 1
 
 [node name="Txt_pnl" type="Panel" parent="Body/CenterBody/Home/progress_steps/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(600, 74)
 layout_mode = 2
 size_flags_vertical = 4
@@ -1965,7 +1971,6 @@ text = "Rent_a_house_"
 vertical_alignment = 1
 
 [node name="Txt_pnl2" type="Panel" parent="Body/CenterBody/Home/progress_steps/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(100, 74)
 layout_mode = 2
 size_flags_vertical = 4
@@ -1984,7 +1989,6 @@ value = 50.0
 show_percentage = false
 
 [node name="Txt_pnl3" type="Panel" parent="Body/CenterBody/Home/progress_steps/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(200, 74)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2028,7 +2032,6 @@ theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Study_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2080,7 +2083,6 @@ theme_override_styles/pressed = ExtResource("8_awvlj")
 theme_override_styles/normal = ExtResource("8_awvlj")
 
 [node name="Work_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2115,7 +2117,6 @@ scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("12_8rwdu")
 
 [node name="Bank_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2150,7 +2151,6 @@ scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("13_g0440")
 
 [node name="Shop_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2170,7 +2170,6 @@ scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("23_3w8pl")
 
 [node name="To_do_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2190,7 +2189,6 @@ scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("15_4fqho")
 
 [node name="Achievements_pnl" type="Panel" parent="Body/CenterBody/Home/submenu/card/HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(148, 148)
 layout_mode = 2
 size_flags_vertical = 4
@@ -2218,7 +2216,6 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 0
 
 [node name="card" type="Panel" parent="Body/CenterBody/Home/own_card_container"]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("10_pgllj")
 
@@ -2263,7 +2260,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_a18jp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nul8m")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2327,7 +2324,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ght56")
+theme_override_styles/panel = SubResource("StyleBoxFlat_wm6l6")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2396,7 +2393,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_gm8jg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7deat")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2460,7 +2457,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_nul8m")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4igdw")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2666,7 +2663,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wm6l6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ji3v4")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4016,7 +4013,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7deat")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgkq7")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4163,7 +4160,16 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("71_30u8p")
 
-[node name="Control" parent="Body/CenterBody/BusinessDashboard" instance=ExtResource("72_ob78p")]
+[node name="current_work" type="MarginContainer" parent="Body/CenterBody/BusinessDashboard"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="Control" parent="Body/CenterBody/BusinessDashboard/current_work" instance=ExtResource("72_ob78p")]
 layout_mode = 2
 
 [node name="real_estate_balance" type="MarginContainer" parent="Body/CenterBody/BusinessDashboard"]
@@ -4238,7 +4244,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4igdw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40vpa")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4371,6 +4377,255 @@ theme_override_styles/hover = ExtResource("8_awvlj")
 theme_override_styles/pressed = ExtResource("8_awvlj")
 theme_override_styles/normal = ExtResource("8_awvlj")
 
+[node name="ShopDashboard" type="VBoxContainer" parent="Body/CenterBody"]
+visible = false
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("74_a18jp")
+
+[node name="Item_container" type="MarginContainer" parent="Body/CenterBody/ShopDashboard"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body/CenterBody/ShopDashboard/Item_container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/CenterBody/ShopDashboard/Item_container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="submenu" type="MarginContainer" parent="Body/CenterBody/ShopDashboard"]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="card" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_awvlj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Body/CenterBody/ShopDashboard/submenu/card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="cloth_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/cloth_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="cloth_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/cloth_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("77_40vpa")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="food_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/food_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="food_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/food_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("78_symoh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="medicine_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/medicine_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="medicine_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/medicine_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("79_dwt0w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="furniture_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/furniture_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="furniture_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/furniture_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("80_j507v")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="upgrade_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/upgrade_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="upgrade_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/upgrade_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("81_7y6ma")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="real_pnl" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer"]
+custom_minimum_size = Vector2(148, 148)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("10_pgllj")
+
+[node name="Panel" type="Panel" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/real_pnl"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 138.0
+theme_override_styles/panel = ExtResource("76_cgkq7")
+
+[node name="real_btn" type="TextureButton" parent="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/real_pnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("82_ntbh1")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Menu" type="PanelContainer" parent="Body"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
@@ -4378,7 +4633,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rpspu")
 script = ExtResource("40_so5yr")
 
 [node name="Panel2" type="Panel" parent="Body/Menu"]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("10_pgllj")
 
@@ -4429,7 +4683,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ji3v4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dwt0w")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 256
 radius_bottom_right = 256
@@ -5293,6 +5547,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Tutorial" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 40.0
 offset_top = 1000.0
@@ -6841,10 +7096,24 @@ show_percentage = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Message"]
 stream = ExtResource("103_hh5p8")
 
+[node name="message_btn" type="Button" parent="Message"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/hover_pressed = ExtResource("8_awvlj")
+theme_override_styles/hover = ExtResource("8_awvlj")
+theme_override_styles/pressed = ExtResource("8_awvlj")
+theme_override_styles/normal = ExtResource("8_awvlj")
+
 [connection signal="pressed" from="Body/Header/bank" to="Body/Header" method="_on_bank_pressed"]
 [connection signal="pressed" from="Body/Header/carefull" to="Body/Header" method="_on_carefull_pressed"]
 [connection signal="pressed" from="Body/CenterBody/Home/submenu/card/HBoxContainer/Study_pnl/Study_btn" to="Body/CenterBody/Home" method="_on_study_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/Home/submenu/card/HBoxContainer/Work_pnl/Work_btn" to="Body/CenterBody/Home" method="_on_work_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/Home/submenu/card/HBoxContainer/Shop_pnl/Shop_btn" to="Body/CenterBody/Home" method="_on_shop_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/Home/own_card_container/card/Progress_container2/HBoxContainer/House_pnl/House_btn" to="Body/CenterBody/Home" method="_on_house_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/Houses/House/HBoxContainer8/Panel3/HBoxContainer2/kitchen/kitchen_btn" to="Body/CenterBody/Houses" method="_on_kitchen_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/Houses/House/HBoxContainer8/Panel3/HBoxContainer2/dinning/dinning_btn" to="Body/CenterBody/Houses" method="_on_dinning_btn_pressed"]
@@ -6871,8 +7140,15 @@ stream = ExtResource("103_hh5p8")
 [connection signal="pressed" from="Body/CenterBody/HousesDashboard/Item_container/Panel/market_btn" to="Body/CenterBody/HousesDashboard" method="_on_market_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/BusinessDashboard/picture/card/living_house_btn" to="Body/CenterBody/BusinessDashboard" method="_on_living_house_btn_pressed"]
 [connection signal="pressed" from="Body/CenterBody/BusinessDashboard/Item_container/Panel/market_btn" to="Body/CenterBody/BusinessDashboard" method="_on_market_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/cloth_pnl/cloth_btn" to="Body/CenterBody/ShopDashboard" method="_on_cloth_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/food_pnl/food_btn" to="Body/CenterBody/ShopDashboard" method="_on_food_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/medicine_pnl/medicine_btn" to="Body/CenterBody/ShopDashboard" method="_on_medicine_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/furniture_pnl/furniture_btn" to="Body/CenterBody/ShopDashboard" method="_on_furniture_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/upgrade_pnl/upgrade_btn" to="Body/CenterBody/ShopDashboard" method="_on_upgrade_btn_pressed"]
+[connection signal="pressed" from="Body/CenterBody/ShopDashboard/submenu/card/HBoxContainer/real_pnl/real_btn" to="Body/CenterBody/ShopDashboard" method="_on_real_btn_pressed"]
 [connection signal="pressed" from="Body/Menu/Menu_container/Principal/Realshop_pnl/home_btn" to="Body/Menu" method="_on_home_btn_pressed"]
 [connection signal="pressed" from="Body/Menu/Menu_container/Principal/email_pnl/message_btn" to="Body/Menu" method="_on_message_btn_pressed"]
 [connection signal="gui_input" from="Body/Menu/Menu_container/Principal/Clock/Clock_btn" to="Body/Menu" method="_on_clock_btn_gui_input"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="MessagePlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Message/message_btn" to="." method="_on_message_btn_pressed"]

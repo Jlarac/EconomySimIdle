@@ -74,3 +74,8 @@ func _on_house_btn_pressed() -> void:
 func _on_work_btn_pressed() -> void:
 	Data.screen = 'business_dashboard'
 	Data.reset_carefull_income()
+
+
+func _on_shop_btn_pressed() -> void:
+	Data.screen = 'shop_dashboard'
+	Data.reset_carefull_income()

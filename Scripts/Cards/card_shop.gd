@@ -65,6 +65,8 @@ func update_always():
 			for upgrade in Data.Game.Player.OwnUpgrades:
 				if upgrade == Id:
 					status = 'buyed'
+		if Id in Data.Game.Player.OwnItems:
+			status = 'buyed'
 
 func set_upgrades():
 	if len(Data.Game.Player.OwnUpgrades) != 0:

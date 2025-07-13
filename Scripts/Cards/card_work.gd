@@ -1,6 +1,7 @@
 extends Control
 
 var Id = 'no_work'
+var old_Id = ''
 var Screen = 'work'
 var old_screen = 'work_'
 var status = "+"
@@ -14,6 +15,7 @@ signal change_in_work_card(Id)
 
 func _ready() -> void:
 	update_init()
+	old_Id = Id
 
 func _process(_delta: float) -> void:
 	if status != oldstatus:
@@ -24,6 +26,9 @@ func _process(_delta: float) -> void:
 		if Screen == 'business':
 			$Button.show()
 		old_screen = Screen
+	if old_Id != Id:
+		update_init()
+		old_Id = Id
 	update_always()
 
 func update_init() -> void:

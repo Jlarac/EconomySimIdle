@@ -15,6 +15,10 @@ var count = 0
 var keys_dictionary = []
 var steps_times = {'init':1,'text1':2}
 
+var is_dragging = false
+var is_animation = false
+var start_drag_pos_x = 0.0
+
 func _ready() -> void:
 	update_init()
 	
@@ -116,16 +120,24 @@ func update_photos():
 	len_portrait = len(Data.people_portraits)
 	index_portrait = Data.people_portraits.find(name_portrait)
 	
+	var ldummy_index = index_portrait - 2
 	var left_index = index_portrait - 1
 	var right_index = index_portrait + 1
+	var rdummy_index = index_portrait + 2
+	ldummy_index = validate_index(ldummy_index)
 	left_index = validate_index(left_index)
 	right_index = validate_index(right_index)
+	rdummy_index = validate_index(rdummy_index)
+	var ldummy_portrait = Data.people_portraits[ldummy_index]
 	var left_portrait = Data.people_portraits[left_index]
 	var right_portrait = Data.people_portraits[right_index]
+	var rdummy_portrait = Data.people_portraits[rdummy_index]
 	
+	$Create/CreateCharacter/photo/Panel/MarginContainer/VBoxContainer/Panel/ldummy_photo.texture = load(Data.Database.Photos[ldummy_portrait]['Path'])
 	$Create/CreateCharacter/photo/Panel/MarginContainer/VBoxContainer/Panel/user_photo.texture = load(Data.Database.Photos[name_portrait]['Path'])
 	$Create/CreateCharacter/photo/Panel/MarginContainer/VBoxContainer/Panel/left_photo.texture = load(Data.Database.Photos[left_portrait]['Path'])
 	$Create/CreateCharacter/photo/Panel/MarginContainer/VBoxContainer/Panel/right_photo.texture = load(Data.Database.Photos[right_portrait]['Path'])
+	$Create/CreateCharacter/photo/Panel/MarginContainer/VBoxContainer/Panel/rdummy_photo.texture = load(Data.Database.Photos[rdummy_portrait]['Path'])
 
 func update_skill():
 	var friend = skill_friend[$Create/CreateCharacter/skill/Panel2/MarginContainer/VBoxContainer/skills_friend_lst.get_selected_items()[0]]
@@ -181,12 +193,44 @@ func _on_complete_pressed() -> void:
 
 func _on_left_pressed() -> void:
 	var index = (index_portrait - 1)
+	print(2,'-',index)
 	index = validate_index(index)
 	name_portrait = Data.people_portraits[index]
 	update_photos()
 
 func _on_right_pressed() -> void:
 	var index = (index_portrait + 1)
+	print(2,'-',index)
 	index = validate_index(index)
 	name_portrait = Data.people_portraits[index]
 	update_photos()
+
+
+func _on_panel_gui_input(event: InputEvent) -> void:
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			is_dragging = true
+			start_drag_pos_x = event.position.x
+		else:
+			is_dragging = false
+			var drag_distance = event.position.x - start_drag_pos_x
+	elif event is InputEventScreenDrag and is_dragging:
+		var drag_distance = event.position.x - start_drag_pos_x
+		if abs(drag_distance) > 50:
+			if drag_distance < 0 and !is_animation:
+				is_animation = true
+				$Create/CreateCharacter/photo/AnimationPlayer.play("photo_transition_left")
+				await $Create/CreateCharacter/photo/AnimationPlayer.animation_finished
+				_on_right_pressed()
+				$Create/CreateCharacter/photo/AnimationPlayer.play("RESET")
+				is_animation = false
+			elif drag_distance > 0 and !is_animation:
+				is_animation = true
+				$Create/CreateCharacter/photo/AnimationPlayer.play("photo_transition_right")
+				await $Create/CreateCharacter/photo/AnimationPlayer.animation_finished
+				_on_left_pressed()
+				$Create/CreateCharacter/photo/AnimationPlayer.play("RESET")
+				is_animation = false
+			start_drag_pos_x = event.position.x
+			drag_distance = event.position.x - start_drag_pos_x
+			
