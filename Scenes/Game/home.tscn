@@ -238,7 +238,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm8jg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji3v4"]
 corner_radius_top_left = 256
 corner_radius_top_right = 256
 corner_radius_bottom_right = 256
@@ -259,7 +259,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nul8m"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgkq7"]
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -271,28 +271,28 @@ bg_color = Color(0, 0, 0, 0.427451)
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm6l6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40vpa"]
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7deat"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_symoh"]
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4igdw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwt0w"]
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji3v4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j507v"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -335,7 +335,7 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgkq7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y6ma"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -354,7 +354,7 @@ corner_radius_top_right = 128
 corner_radius_bottom_right = 128
 corner_radius_bottom_left = 128
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40vpa"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntbh1"]
 corner_radius_top_left = 128
 corner_radius_top_right = 128
 corner_radius_bottom_right = 128
@@ -367,7 +367,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4uwn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwt0w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxid0"]
 corner_radius_top_left = 256
 corner_radius_top_right = 256
 corner_radius_bottom_right = 256
@@ -1897,7 +1897,7 @@ offset_left = -550.0
 offset_right = -38.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gm8jg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ji3v4")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 256
 radius_bottom_right = 256
@@ -2006,6 +2006,19 @@ theme_override_font_sizes/font_size = 40
 text = "+$100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Body/CenterBody/Home/progress_steps/card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/hover_pressed = ExtResource("8_awvlj")
+theme_override_styles/hover = ExtResource("8_awvlj")
+theme_override_styles/pressed = ExtResource("8_awvlj")
+theme_override_styles/normal = ExtResource("8_awvlj")
 
 [node name="submenu" type="MarginContainer" parent="Body/CenterBody/Home"]
 custom_minimum_size = Vector2(0, 170)
@@ -2260,7 +2273,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_nul8m")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgkq7")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2324,7 +2337,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_wm6l6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40vpa")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2393,7 +2406,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_7deat")
+theme_override_styles/panel = SubResource("StyleBoxFlat_symoh")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2457,7 +2470,7 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.97, 0.97)
-theme_override_styles/panel = SubResource("StyleBoxFlat_4igdw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dwt0w")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 30
 radius_bottom_right = 30
@@ -2663,7 +2676,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ji3v4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_j507v")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4013,7 +4026,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_cgkq7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7y6ma")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4244,7 +4257,7 @@ offset_left = -512.0
 offset_right = 512.0
 offset_bottom = 1024.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_40vpa")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ntbh1")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 128
 radius_bottom_right = 128
@@ -4683,7 +4696,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dwt0w")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxid0")
 script = ExtResource("9_mpxgm")
 radius_bottom_left = 256
 radius_bottom_right = 256

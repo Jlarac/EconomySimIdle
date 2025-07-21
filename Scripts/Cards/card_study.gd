@@ -94,3 +94,4 @@ func _on_action_btn_pressed() -> void:
 			pass
 	Data.Game.Player.check_variables()
 	$Panel/AudioStreamPlayer.play()
+	$AnimationPlayer.play("buy")

@@ -61,7 +61,7 @@ class_name PlayerData
 
 @export var Houses: Dictionary = {}
 
-@export var ShopItems: Dictionary = {'Cloth': '', 'Food': '', 'Medicine': ''}
+@export var ShopItems: Dictionary = {'Cloth': 'used_cloth_', 'Food': '', 'Medicine': ''}
 
 @export var Friend: String = ''
 @export var Friends: Dictionary = {}
@@ -204,14 +204,14 @@ func increase_happy(value: int) -> void:
 func set_health_happy():
 	HappyDict['work'] = Data.Database.Work[Work]['Happy'] + HappyDict['study']
 	if ShopItems['Food'] != '':
-		HappyDict['food'] = Data.Database.Upgrades[ShopItems['Food']]['Happy']
-		HealthDict['food'] = Data.Database.Upgrades[ShopItems['Food']]['Health']
+		HappyDict['food'] = Data.Database.Food[ShopItems['Food']]['Happy']
+		HealthDict['food'] = Data.Database.Food[ShopItems['Food']]['Health']
 	else:
 		HappyDict['food'] = -5
 		HealthDict['food'] = -5
 	if ShopItems['Cloth'] != '':
-		HappyDict['cloth'] = Data.Database.Upgrades[ShopItems['Cloth']]['Happy']
-		HealthDict['cloth'] = Data.Database.Upgrades[ShopItems['Cloth']]['Health']
+		HappyDict['cloth'] = Data.Database.Clothes[ShopItems['Cloth']]['Happy']
+		HealthDict['cloth'] = Data.Database.Clothes[ShopItems['Cloth']]['Health']
 	else:
 		HappyDict['cloth'] = -5
 		HealthDict['cloth'] = -5
@@ -276,6 +276,16 @@ func set_upgrades():
 			if tier > Upgrades[parent]['Value']:
 				Upgrades[parent]['Name'] = item
 				Upgrades[parent]['Value'] = tier
+	for item in OwnItems:
+		if item in Data.Database.Furnitures:
+			var parent = Data.Database.Furnitures[item]['Parent']
+			var tier = Data.Database.Furnitures[item]['Tier']
+			if parent not in Upgrades:
+				Upgrades[parent] = {'Name':'','Value':0}
+			if tier > Upgrades[parent]['Value']:
+				Upgrades[parent]['Name'] = item
+				Upgrades[parent]['Value'] = tier
+				
 	var dict_hours = {1:2,2:3,3:4,4:6,5:12}
 	var dict_seconds = {0:30,1:20,2:15,3:10,4:6,5:3}
 	if len(OwnUpgrades) != 0:
@@ -348,10 +358,10 @@ func set_moneyperday():
 					MoneyPerDayDetailed['Houses'] += Houses[house]['CostRent']
 	
 	if ShopItems['Cloth'] != '':
-		MoneyPerDayDetailed['Cloth'] = Data.Database.Upgrades[ShopItems['Cloth']]['Price']
+		MoneyPerDayDetailed['Cloth'] = Data.Database.Clothes[ShopItems['Cloth']]['Price']
 	MoneyPerDayDetailed['AllExpense'] -= MoneyPerDayDetailed['Cloth']
 	if ShopItems['Food'] != '':
-		MoneyPerDayDetailed['Food'] = Data.Database.Upgrades[ShopItems['Food']]['Price']
+		MoneyPerDayDetailed['Food'] = Data.Database.Food[ShopItems['Food']]['Price']
 	MoneyPerDayDetailed['AllExpense'] -= MoneyPerDayDetailed['Food']
 	
 	if MoneyPerDayDetailed['Houses'] < 0:

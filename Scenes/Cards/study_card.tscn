@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtodkh8cs1p5j"]
+[gd_scene load_steps=25 format=3 uid="uid://dtodkh8cs1p5j"]
 
 [ext_resource type="Script" uid="uid://d3xnb6ap8owk" path="res://Scripts/Cards/card_study.gd" id="1_h7yrl"]
 [ext_resource type="Texture2D" uid="uid://r7fftlessm27" path="res://Assets/Images/UI/img512.png" id="3_a5vlq"]
 [ext_resource type="FontFile" uid="uid://t8en3f64e5wd" path="res://Resources/Fonts/VarelaRound-Regular.ttf" id="3_ws1v1"]
 [ext_resource type="Texture2D" uid="uid://bho724bfr37oc" path="res://Assets/Images/Menu/facturas (1).png" id="5_ws1v1"]
+[ext_resource type="Texture2D" uid="uid://5ogme2yile7g" path="res://Assets/Images/UI/ticket.png" id="12_a5vlq"]
 [ext_resource type="Texture2D" uid="uid://58g2k0b7p5lu" path="res://Assets/Images/Study/driver_.png" id="12_aqorv"]
 [ext_resource type="Texture2D" uid="uid://bovf7f5kwsbmo" path="res://Assets/Images/Header/happy.png" id="12_k5kjp"]
 [ext_resource type="StyleBox" uid="uid://tlhqbwtjyiab" path="res://Resources/Themes/invisible.tres" id="12_nv4hm"]
@@ -93,6 +94,43 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="Animation" id="Animation_k5kjp"]
+resource_name = "buy"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(850, 580), Vector2(850, -130)]
+}
+
+[sub_resource type="Animation" id="Animation_kalxt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(850, 580)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yfgrp"]
+_data = {
+&"RESET": SubResource("Animation_kalxt"),
+&"buy": SubResource("Animation_k5kjp")
+}
+
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(1000, 572)
 layout_mode = 3
@@ -107,6 +145,7 @@ mouse_filter = 1
 script = ExtResource("1_h7yrl")
 
 [node name="Panel" type="Panel" parent="."]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -393,7 +432,20 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pl8kh")
 disabled = true
 text = "#Button_todo"
 
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+offset_left = 850.0
+offset_top = -130.0
+offset_right = 978.0
+offset_bottom = -2.0
+texture = ExtResource("12_a5vlq")
+expand_mode = 1
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel"]
 stream = ExtResource("12_ws1v1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yfgrp")
+}
 
 [connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/Panel/action_btn" to="." method="_on_action_btn_pressed"]

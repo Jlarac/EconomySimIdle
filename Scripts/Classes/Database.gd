@@ -294,24 +294,6 @@ class_name Tables
 	"upgrade_card_4": {"Path":"res://Assets/Images/Upgrades/card.png","Price": 100000,"Kind":"Upgrade","Type":"unique","Parent":"Card","Tier": 4,"Impact":0,"Name":"card_basic_","Health":0,"Happy":0,"Desc":""},
 	"upgrade_card_5": {"Path":"res://Assets/Images/Upgrades/card.png","Price": 1000000,"Kind":"Upgrade","Type":"unique","Parent":"Card","Tier": 5,"Impact":0,"Name":"card_basic_","Health":0,"Happy":0,"Desc":""},
 	
-	"personal_cloth_1": {"Path":"res://Assets/Images/Upgrades/cloth1.png","Price": 1,"Kind":"Recurrent","Type":"recurrent","Parent":"Cloth","Tier": 1,"Impact":1,"Name":"used_cloth_","Health":-2,"Happy":-5,"Desc":""},
-	"personal_cloth_2": {"Path":"res://Assets/Images/Upgrades/cloth2.png","Price": 5,"Kind":"Recurrent","Type":"recurrent","Parent":"Cloth","Tier": 2,"Impact":2,"Name":"cheap_cloth_","Health":-1,"Happy":-3,"Desc":""},
-	"personal_cloth_3": {"Path":"res://Assets/Images/Upgrades/cloth3.png","Price": 40,"Kind":"Recurrent","Type":"recurrent","Parent":"Cloth","Tier": 3,"Impact":3,"Name":"imitation_cloth_","Health":0,"Happy":0,"Desc":""},
-	"personal_cloth_4": {"Path":"res://Assets/Images/Upgrades/cloth4.png","Price": 450,"Kind":"Recurrent","Type":"recurrent","Parent":"Cloth","Tier": 4,"Impact":4,"Name":"branded_cloth_","Health":1,"Happy":3,"Desc":""},
-	"personal_cloth_5": {"Path":"res://Assets/Images/Upgrades/cloth5.png","Price": 1000,"Kind":"Recurrent","Type":"recurrent","Parent":"Cloth","Tier": 5,"Impact":5,"Name":"tailored_cloth_","Health":2,"Happy":5,"Desc":""},
-	
-	"personal_food_1": {"Path":"res://Assets/Images/Upgrades/food1.png","Price": 15,"Kind":"Recurrent","Type":"recurrent","Parent":"Food","Tier": 1,"Impact":1,"Name":"soup_food_","Health":-1,"Happy":3,"Desc":""},
-	"personal_food_2": {"Path":"res://Assets/Images/Upgrades/food2.png","Price": 30,"Kind":"Recurrent","Type":"recurrent","Parent":"Food","Tier": 2,"Impact":2,"Name":"fast_food_","Health":-3,"Happy":20,"Desc":""},
-	"personal_food_3": {"Path":"res://Assets/Images/Upgrades/food3.png","Price": 80,"Kind":"Recurrent","Type":"recurrent","Parent":"Food","Tier": 3,"Impact":3,"Name":"home_food_","Health":1,"Happy":5,"Desc":""},
-	"personal_food_4": {"Path":"res://Assets/Images/Upgrades/food4.png","Price": 200,"Kind":"Recurrent","Type":"recurrent","Parent":"Food","Tier": 4,"Impact":4,"Name":"vegan_food_","Health":2,"Happy":10,"Desc":""},
-	"personal_food_5": {"Path":"res://Assets/Images/Upgrades/food5.png","Price": 1200,"Kind":"Recurrent","Type":"recurrent","Parent":"Food","Tier": 5,"Impact":5,"Name":"chef_food_","Health":3,"Happy":20,"Desc":""},
-	
-	"personal_medicine_1": {"Path":"res://Assets/Images/Upgrades/medicine1.png","Price": 10,"Kind":"Medicine","Type":"recurrent_medicine","Parent":"Medicine","Tier": 1,"Impact":1,"Name":"generic_medicine_","Health":2,"Happy":0,"Desc":""},
-	"personal_medicine_2": {"Path":"res://Assets/Images/Upgrades/medicine2.png","Price": 20,"Kind":"Medicine","Type":"recurrent_medicine","Parent":"Medicine","Tier": 2,"Impact":2,"Name":"oldpatent_medicine_","Health":5,"Happy":0,"Desc":""},
-	"personal_medicine_3": {"Path":"res://Assets/Images/Upgrades/medicine3.png","Price": 30,"Kind":"Medicine","Type":"recurrent_medicine","Parent":"Medicine","Tier": 3,"Impact":3,"Name":"patent_medicine_","Health":10,"Happy":0,"Desc":""},
-	"personal_medicine_4": {"Path":"res://Assets/Images/Upgrades/medicine4.png","Price": 40,"Kind":"Medicine","Type":"recurrent_medicine","Parent":"Medicine","Tier": 4,"Impact":4,"Name":"specialist_medicine_","Health":15,"Happy":0,"Desc":""},
-	"personal_medicine_5": {"Path":"res://Assets/Images/Upgrades/medicine5.png","Price": 60,"Kind":"Medicine","Type":"recurrent_medicine","Parent":"Medicine","Tier": 5,"Impact":5,"Name":"multivitamin_medicine_","Health":20,"Happy":0,"Desc":""},
-	
 	"upgrade_agenda_1": {"Path":"res://Assets/Images/Upgrades/agenda1.png","Price": 250,"Kind":"Upgrade","Type":"unique","Parent":"Clic","Tier": 1,"Impact":1,"Name":"normal_book_","Health":0,"Happy":0,"Desc":"improve_hours_two"},
 	"upgrade_agenda_2": {"Path":"res://Assets/Images/Upgrades/agenda2.png","Price": 500,"Kind":"Upgrade","Type":"unique","Parent":"Clic","Tier": 2,"Impact":2,"Name":"normal_agenda_","Health":0,"Happy":0,"Desc":"improve_hours_three"},
 	"upgrade_agenda_3": {"Path":"res://Assets/Images/Upgrades/agenda3.png","Price": 1000,"Kind":"Upgrade","Type":"unique","Parent":"Clic","Tier": 3,"Impact":3,"Name":"lether_agenda_","Health":0,"Happy":0,"Desc":"improve_hours_four"},
@@ -337,17 +319,97 @@ class_name Tables
 	"upgrade_computer_4": {"Path":"res://Assets/Images/Upgrades/computer4.png","Price": 20000,"Kind":"Upgrade","Type":"unique","Parent":"Computer","Tier": 4,"Impact":4,"Name":"work_computer_","Health":0,"Happy":0,"Desc":"improve_bussines_four"},
 	"upgrade_computer_5": {"Path":"res://Assets/Images/Upgrades/computer5.png","Price": 30000,"Kind":"Upgrade","Type":"unique","Parent":"Computer","Tier": 5,"Impact":5,"Name":"gamer_computer_","Health":0,"Happy":0,"Desc":"improve_bussines_five"},
 	
-	"furniture_guitar_1": {"Path":"res://Assets/Images/Upgrades/guitar1.png","Price": 500,"Kind":"Furniture","Type":"unique","Parent":"Guitar","Tier": 1,"Impact":1,"Name":"ukelele_","Health":0,"Happy":0,"Desc":"guitar_to_practice_"},
-	"furniture_guitar_2": {"Path":"res://Assets/Images/Upgrades/guitar2.png","Price": 1500,"Kind":"Furniture","Type":"unique","Parent":"Guitar","Tier": 2,"Impact":2,"Name":"acustic_guitar_","Health":0,"Happy":0,"Desc":"guitar_to_practice_"},
-	"furniture_guitar_3": {"Path":"res://Assets/Images/Upgrades/guitar3.png","Price": 3500,"Kind":"Furniture","Type":"unique","Parent":"Guitar","Tier": 3,"Impact":3,"Name":"electric_guitar_","Health":0,"Happy":0,"Desc":"guitar_to_practice_"},
-	"furniture_guitar_4": {"Path":"res://Assets/Images/Upgrades/guitar4.png","Price": 4500,"Kind":"Furniture","Type":"unique","Parent":"Guitar","Tier": 4,"Impact":4,"Name":"bajo_","Health":0,"Happy":0,"Desc":"guitar_to_practice_"},
-	"furniture_guitar_5": {"Path":"res://Assets/Images/Upgrades/guitar5.png","Price": 6500,"Kind":"Furniture","Type":"unique","Parent":"Guitar","Tier": 5,"Impact":5,"Name":"double_guitar_","Health":0,"Happy":0,"Desc":"guitar_to_practice_"},
+}
+
+@export var Clothes: Dictionary = {
+	"used_cloth_": {"Price": 1,"Impact": 0.7,"Health":-2,"Happy":-2,"Desc":"general_work_",'Tier':1,'Parent':'Cloth',"Type":"Recurrent"},
+	"cheap_cloth_": {"Price": 10,"Impact": 1.0,"Health":-1,"Happy":-1,"Desc":"general_work_",'Tier':1,'Parent':'Cloth',"Type":"Recurrent"},
+	"basic2_cloth_": {"Price": 100,"Impact": 1.1,"Health":1,"Happy":1,"Desc":"general_work_",'Tier':2,'Parent':'Cloth',"Type":"Recurrent"},
+	"basic3_cloth_": {"Price": 200,"Impact": 1.2,"Health":1,"Happy":1,"Desc":"general_work_",'Tier':2,'Parent':'Cloth',"Type":"Recurrent"},
+	"basic4_cloth_": {"Price": 400,"Impact": 1.3,"Health":1,"Happy":1,"Desc":"general_work_",'Tier':3,'Parent':'Cloth',"Type":"Recurrent"},
+	"basic5_cloth_": {"Price": 800,"Impact": 1.4,"Health":1,"Happy":1,"Desc":"general_work_",'Tier':3,'Parent':'Cloth',"Type":"Recurrent"},
+	"basic_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"basic_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"paint_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"paint_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"sport_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"sport_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"music_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"music_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"police_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"police_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"engineer_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"engineer_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"doctor_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"doctor_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"science_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"science_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"driver_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"driver_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"boat_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"boat_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"air_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"air_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"chef_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"chef_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"movie_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"movie_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"law_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"law_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"account_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"account_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"draw_cloth_": {"Price": 1000,"Impact": 1.5,"Health":1,"Happy":1,"Desc":"draw_",'Tier':4,'Parent':'Cloth',"Type":"Recurrent"},
+	"tailored_cloth_": {"Price": 5000,"Impact": 2.0,"Health":2,"Happy":2,"Desc":"general_work_",'Tier':5,'Parent':'Cloth',"Type":"Recurrent"},
+}
+
+@export var Food: Dictionary = {
+	"soup_food_": {"Price": 5,"Impact": 0.7,"Health":-4,"Happy":5,"Desc":"business_title",'Tier':1,'Parent':'Food',"Type":"Recurrent"},
+	"sandwich_food_": {"Price": 10,"Impact": 0.9,"Health":-2,"Happy":-1,"Desc":"business_title",'Tier':1,'Parent':'Food',"Type":"Recurrent"},
+	"burrito_food_": {"Price": 20,"Impact": 0.8,"Health":-2,"Happy":1,"Desc":"business_title",'Tier':2,'Parent':'Food',"Type":"Recurrent"},
+	"fast_food_": {"Price": 30,"Impact": 0.8,"Health":-3,"Happy":3,"Desc":"business_title",'Tier':2,'Parent':'Food',"Type":"Recurrent"},
+	"pizza_food_": {"Price": 40,"Impact": 0.8,"Health":-4,"Happy":3,"Desc":"business_title",'Tier':2,'Parent':'Food',"Type":"Recurrent"},
+	"tamal_food_": {"Price": 150,"Impact": 0.9,"Health":-1,"Happy":2,"Desc":"business_title",'Tier':3,'Parent':'Food',"Type":"Recurrent"},
+	"chicken_food_": {"Price": 200,"Impact": 1.0,"Health":1,"Happy":2,"Desc":"business_title",'Tier':3,'Parent':'Food',"Type":"Recurrent"},
+	"home_food_": {"Price": 500,"Impact": 1.0,"Health":2,"Happy":3,"Desc":"business_title",'Tier':4,'Parent':'Food',"Type":"Recurrent"},
+	"vegan_food_": {"Price": 700,"Impact": 1.5,"Health":2,"Happy":3,"Desc":"business_title",'Tier':4,'Parent':'Food',"Type":"Recurrent"},
+	"bento_food_": {"Price": 800,"Impact": 1.5,"Health":2,"Happy":3,"Desc":"business_title",'Tier':4,'Parent':'Food',"Type":"Recurrent"},
+	"steack_food_": {"Price": 1500,"Impact": 1.7,"Health":3,"Happy":4,"Desc":"business_title",'Tier':5,'Parent':'Food',"Type":"Recurrent"},
+	"chef_food_": {"Price": 2000,"Impact": 2.0,"Health":4,"Happy":4,"Desc":"business_title",'Tier':5,'Parent':'Food',"Type":"Recurrent"},
+}
+
+@export var Medicine: Dictionary = {
+	"generic_medicine_": {"Price": 5,"Impact": 0,"Health":2,"Happy":-1,"Desc":"immunity_",'Tier':1,'Parent':'Medicine',"Type":"Unique"},
+	"patent_medicine_": {"Price": 20,"Impact": 2,"Health":5,"Happy":1,"Desc":"immunity_",'Tier':2,'Parent':'Medicine',"Type":"Unique"},
+	"intramuscular_medicine_": {"Price": 60,"Impact": 4,"Health":10,"Happy":-2,"Desc":"immunity_",'Tier':3,'Parent':'Medicine',"Type":"Unique"},
+	"specialist_medicine_": {"Price": 100,"Impact": 6,"Health":20,"Happy":2,"Desc":"immunity_",'Tier':3,'Parent':'Medicine',"Type":"Unique"},
+	"multivitamin_medicine_": {"Price": 500,"Impact": 8,"Health":30,"Happy":2,"Desc":"immunity_",'Tier':4,'Parent':'Medicine',"Type":"Unique"},
+	"surgery_medicine_": {"Price": 1000,"Impact": 10,"Health":100,"Happy":-10,"Desc":"immunity_",'Tier':5,'Parent':'Medicine',"Type":"Unique"},
+}
+
+@export var Furnitures: Dictionary = {
+	'furniture_paint_1': {'Price': 200,'Impact': 1,'Health':0,'Happy':1,'Desc':'paint_to_practice_','Tier':1,'Parent':'Paint','Type':'Unique'},
+	'furniture_paint_2': {'Price': 600,'Impact': 2,'Health':0,'Happy':1,'Desc':'paint_to_practice_','Tier':2,'Parent':'Paint','Type':'Unique'},
+	'furniture_paint_3': {'Price': 1900,'Impact': 3,'Health':0,'Happy':1,'Desc':'paint_to_practice_','Tier':3,'Parent':'Paint','Type':'Unique'},
+	'furniture_paint_4': {'Price': 4200,'Impact': 4,'Health':0,'Happy':1,'Desc':'paint_to_practice_','Tier':4,'Parent':'Paint','Type':'Unique'},
+	'furniture_paint_5': {'Price': 7800,'Impact': 5,'Health':0,'Happy':1,'Desc':'paint_to_practice_','Tier':5,'Parent':'Paint','Type':'Unique'},
 	
-	"furniture_piano_1": {"Path":"res://Assets/Images/Upgrades/piano1.png","Price": 700,"Kind":"Furniture","Type":"unique","Parent":"Piano","Tier": 1,"Impact":1,"Name":"piano_toy_","Health":0,"Happy":0,"Desc":"piano_to_practice_"},
-	"furniture_piano_2": {"Path":"res://Assets/Images/Upgrades/piano2.png","Price": 1900,"Kind":"Furniture","Type":"unique","Parent":"Piano","Tier": 2,"Impact":2,"Name":"acustic_piano_","Health":0,"Happy":0,"Desc":"piano_to_practice_"},
-	"furniture_piano_3": {"Path":"res://Assets/Images/Upgrades/piano3.png","Price": 4200,"Kind":"Furniture","Type":"unique","Parent":"Piano","Tier": 3,"Impact":3,"Name":"electric_piano_","Health":0,"Happy":0,"Desc":"piano_to_practice_"},
-	"furniture_piano_4": {"Path":"res://Assets/Images/Upgrades/piano4.png","Price": 5700,"Kind":"Furniture","Type":"unique","Parent":"Piano","Tier": 4,"Impact":4,"Name":"bajo_","Health":0,"Happy":0,"Desc":"piano_to_practice_"},
-	"furniture_piano_5": {"Path":"res://Assets/Images/Upgrades/piano5.png","Price": 16800,"Kind":"Furniture","Type":"unique","Parent":"Piano","Tier": 5,"Impact":5,"Name":"double_piano_","Health":0,"Happy":0,"Desc":"piano_to_practice_"},
+	'furniture_guitar_1': {'Price': 500,'Impact': 1,'Health':0,'Happy':1,'Desc':'guitar_to_practice_','Tier':1,'Parent':'Guitar','Type':'Unique'},
+	'furniture_guitar_2': {'Price': 1500,'Impact': 2,'Health':0,'Happy':1,'Desc':'guitar_to_practice_','Tier':2,'Parent':'Guitar','Type':'Unique'},
+	'furniture_guitar_3': {'Price': 3500,'Impact': 3,'Health':0,'Happy':1,'Desc':'guitar_to_practice_','Tier':3,'Parent':'Guitar','Type':'Unique'},
+	'furniture_guitar_4': {'Price': 4500,'Impact': 4,'Health':0,'Happy':1,'Desc':'guitar_to_practice_','Tier':4,'Parent':'Guitar','Type':'Unique'},
+	'furniture_guitar_5': {'Price': 6500,'Impact': 5,'Health':0,'Happy':1,'Desc':'guitar_to_practice_','Tier':5,'Parent':'Guitar','Type':'Unique'},
+	
+	'furniture_piano_1': {'Price': 700,'Impact': 1,'Health':0,'Happy':1,'Desc':'piano_to_practice_','Tier':1,'Parent':'Piano','Type':'Unique'},
+	'furniture_piano_2': {'Price': 1900,'Impact': 2,'Health':0,'Happy':1,'Desc':'piano_to_practice_','Tier':2,'Parent':'Piano','Type':'Unique'},
+	'furniture_piano_3': {'Price': 4200,'Impact': 3,'Health':0,'Happy':1,'Desc':'piano_to_practice_','Tier':3,'Parent':'Piano','Type':'Unique'},
+	'furniture_piano_4': {'Price': 5700,'Impact': 4,'Health':0,'Happy':1,'Desc':'piano_to_practice_','Tier':4,'Parent':'Piano','Type':'Unique'},
+	'furniture_piano_5': {'Price': 16800,'Impact': 5,'Health':0,'Happy':1,'Desc':'piano_to_practice_','Tier':5,'Parent':'Piano','Type':'Unique'},
+	
+	'furniture_saxofon_1': {'Price': 700,'Impact': 1,'Health':0,'Happy':1,'Desc':'saxofon_to_practice_','Tier':1,'Parent':'Saxofon','Type':'Unique'},
+	'furniture_saxofon_2': {'Price': 1900,'Impact': 2,'Health':0,'Happy':1,'Desc':'saxofon_to_practice_','Tier':2,'Parent':'Saxofon','Type':'Unique'},
+	'furniture_saxofon_3': {'Price': 4200,'Impact': 3,'Health':0,'Happy':1,'Desc':'saxofon_to_practice_','Tier':3,'Parent':'Saxofon','Type':'Unique'},
+	'furniture_saxofon_4': {'Price': 5700,'Impact': 4,'Health':0,'Happy':1,'Desc':'saxofon_to_practice_','Tier':4,'Parent':'Saxofon','Type':'Unique'},
+	'furniture_saxofon_5': {'Price': 16800,'Impact': 5,'Health':0,'Happy':1,'Desc':'saxofon_to_practice_','Tier':5,'Parent':'Saxofon','Type':'Unique'},
+	
+	'furniture_drum_1': {'Price': 700,'Impact': 1,'Health':0,'Happy':1,'Desc':'drum_to_practice_','Tier':1,'Parent':'Drum','Type':'Unique'},
+	'furniture_drum_2': {'Price': 1900,'Impact': 2,'Health':0,'Happy':1,'Desc':'drum_to_practice_','Tier':2,'Parent':'Drum','Type':'Unique'},
+	'furniture_drum_3': {'Price': 4200,'Impact': 3,'Health':0,'Happy':1,'Desc':'drum_to_practice_','Tier':3,'Parent':'Drum','Type':'Unique'},
+	'furniture_drum_4': {'Price': 5700,'Impact': 4,'Health':0,'Happy':1,'Desc':'drum_to_practice_','Tier':4,'Parent':'Drum','Type':'Unique'},
+	'furniture_drum_5': {'Price': 16800,'Impact': 5,'Health':0,'Happy':1,'Desc':'drum_to_practice_','Tier':5,'Parent':'Drum','Type':'Unique'},
+	
+	'furniture_microphone_1': {'Price': 700,'Impact': 1,'Health':0,'Happy':1,'Desc':'microphone_to_practice_','Tier':1,'Parent':'Microphone','Type':'Unique'},
+	'furniture_microphone_2': {'Price': 1900,'Impact': 2,'Health':0,'Happy':1,'Desc':'microphone_to_practice_','Tier':2,'Parent':'Microphone','Type':'Unique'},
+	'furniture_microphone_3': {'Price': 4200,'Impact': 3,'Health':0,'Happy':1,'Desc':'microphone_to_practice_','Tier':3,'Parent':'Microphone','Type':'Unique'},
+	'furniture_microphone_4': {'Price': 5700,'Impact': 4,'Health':0,'Happy':1,'Desc':'microphone_to_practice_','Tier':4,'Parent':'Microphone','Type':'Unique'},
+	'furniture_microphone_5': {'Price': 16800,'Impact': 5,'Health':0,'Happy':1,'Desc':'microphone_to_practice_','Tier':5,'Parent':'Microphone','Type':'Unique'},
+	
+	
+	
 }
 
 @export var Activities: Dictionary = {
@@ -654,7 +716,6 @@ class_name Tables
 }
 
 @export var Progress: Dictionary = {
-	"progress_cloth": {'Reward':100,'Points':10},
-	"progress_food": {'Reward':100,'Points':10},
-	"progress_f": {'Reward':100,'Points':10},
+	1: {'Name':'quest_cloth_','Reward':100,'Points':10},
+	2: {'Name':'quest_food_','Reward':100,'Points':10}
 }

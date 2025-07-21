@@ -108,6 +108,8 @@ var income_status = false
 
 var Tutorial = true
 
+var shop_screen = ''
+
 		
 func _ready():
 	randomize()
@@ -168,6 +170,7 @@ func update_game_time() -> void:
 	Game.CurrentDate = "%02d/%s/%04d" % [dictdate["day"], tr(months[dictdate["month"]]),dictdate["year"]] #str(Data.dictdate["day"])+"/"+tr(Data.months[Data.dictdate["month"]])+"/"+str(Data.dictdate["year"])
 	var hour_diff = abs(dictdate["hour"] - Game.LastHour)
 	if hour_diff >= Game.AutomaticHours:
+		#print()
 		clic_auto()
 		save_game()
 		Game.LastHour = dictdate["hour"]
@@ -257,6 +260,8 @@ func clic_auto():
 func clic_manual():
 	Game.Player.ManualClic += 1
 	Game.Date += ( 3600 * Game.AutomaticHours ) #* 24
+	dictdate = Time.get_datetime_dict_from_unix_time(Game.Date)
+	Game.LastHour = dictdate["hour"]
 	clic_action()
 	
 func clic_action():
@@ -265,12 +270,7 @@ func clic_action():
 	if Game.LastDay != dictdate['day']:
 		Game.LastDay = dictdate['day']
 		change_day()
-	#save_current()
 	save_game()
-	
-	#update_screen = true
-	#update_lbl = true
-	#update_date = true
 
 func change_day():
 	for people in Game.People:
@@ -279,11 +279,6 @@ func change_day():
 	Game.Player.check_variables()
 	Game.Player.change_day()
 	#Game.set_inflation()
-	
-	
-
-
-
 
 func health_house(rooms_dictionary):
 	var tier_health = {'kitchen':-2,'bedroom':-2,'bath':-2}

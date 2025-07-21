@@ -712,3 +712,5 @@ func _on_message_btn_pressed() -> void:
 			Data.screen = 'study'
 		elif Data.Game.Messages[current_message]['area'] == 'linkin_':
 			Data.screen = 'work'
+		Data.Game.Messages[current_message]['status'] = false
+		time_message = 4.9

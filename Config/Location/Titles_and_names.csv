@@ -323,21 +323,43 @@ break_,Romper Relacion,Break Up
 accept_,Aceptar,Accept
 no_friends_,Sin amigos,Friendless
 not_available_,No disponible,Not available
-used_cloth_,Ropa usada,Used cloth
-cheap_cloth_,Ropa barata,Cheap cloth
-imitation_cloth_,Ropa de imitacion,Imitation cloth
-branded_cloth_,Ropa de marca,Branded cloth
-tailored_cloth_,Ropa de sastre,Tailored cloth
+used_cloth_,Ropa Usada,Used cloth
+cheap_cloth_,Ropa Barata,Cheap cloth
+basic2_cloth_,Edicion Amor,Love Edition
+basic3_cloth_,Edicion Amigos,Friends Edition
+basic4_cloth_,Edicion Tierra,Earth Edition
+basic5_cloth_,Edicion Orgullo,Pride Edition
+basic_cloth_,Playera Polo,Polo Tshirt
+paint_cloth_,Ropa Pintor,Paint Suit
+sport_cloth_,Ropa Deportiva,Sport Suit
+music_cloth_,Ropa Rockera,Rock Star
+police_cloth_,Ropa de Servicio Publico,Public Service Suit
+engineer_cloth_,Ropa de Seguridad,Security Suit
+doctor_cloth_,Ropa de Doctor,Doctor
+science_cloth_,Traje de Pruebas,Test Suit
+driver_cloth_,Traje de Piloto,Driver Suit
+boat_cloth_,Traje de Capitan,Captain Suit
+air_cloth_,Traje de Piloto Aviador,Flying Captain
+chef_cloth_,Traje de Chef,Chef
+movie_cloth_,Ropa de Actuacion,Movies Suit
+law_cloth_,Traje Formal,Formal Suit
+account_cloth_,Traje SemiFormal,Casual Clothing
+draw_cloth_,Ropa Sencilla,Simple Cloth
+tailored_cloth_,Ropa de Sastre,Tailored Cloth
+income_improve_,Mejora el Ingreso,Income Improve
+work_,Trabajo,Work
+in_,en,in
 soup_food_,Sopa instantanea,Instant soup
 fast_food_,Comida rapida,Fast food
 home_food_,Comida casera,Home food
 vegan_food_,Comida vegana,Vegan food
 chef_food_,Comida de chef,Chef food
 generic_medicine_,Medicina generica,Generic medicine
-oldpatent_medicine_,Medicina de patente vieja,Old patent medicine
+intramuscular_medicine_,Inyeccion intramuscular,Intramuscular Medication
 patent_medicine_,Medicina de patente,Patent medicine
 specialist_medicine_,Medicine de especialidad,Specialist medicine
 multivitamin_medicine_,Multivitaminico,Multivitamin
+surgery_medicine_,Cirugia,Surgery
 select_,Seleccinar,Select
 buy_,Comprar,Buy
 cancel_,Cancelar,Cancel
@@ -427,3 +449,21 @@ progress_desc_,Metas,Goals
 submenu_desc_,"Estudio, Trabajo, Banco, Tienda, Actividades","Study, Work, Bank, Shop, Activities"
 own_desc_,"Amigos, Casa, Automovil, Patrimonio","Friends, Houses, Cars, Heritage"
 menu_desc_,"Perfil, Notificaciones, Clicker, Multijugador, Configuraciones","User, Notifications, Clicker, Multiplayer, Settings"
+general_work_,Todos los Trabajos,All Works
+basic_,Basicos,Basics
+paint_,Pintura,Paint
+sport_,Deportes,Sports
+music_,Musicos,Musicians
+police_,Servicio Publico,Public Service 
+engineer_,Ingenieria,Engineering
+doctor_,Medicina,Medicine
+science_,Ciencias,Science
+driver_,Conduccion,Driver
+air_,Vuelo,Flight
+chef_,Cocina,Chef
+movie_,Actuacion,Performance
+law_,Leyes,Law
+account_,Finanzas,Finance
+draw_,Arquitectura,Architecture
+boat_,Navegacion,Navigation
+immunity_,Inmunidad,Immunity
